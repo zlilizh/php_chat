@@ -63,6 +63,12 @@ var xt_wsk ={
                 $('.ddzm_top_dl').html(_dzpoker);
                 $('.ddz_dom_now_pklist').html('');
                 $('.ddz_dom_top_mul').html(1);
+
+                xt_ddz.showlandlord('up','');
+                xt_ddz.showlandlord('next','');
+                xt_ddz.showlandlord('my','');
+
+
             }else{
                 $('.ddz_dom_pkblk_pos_'+_rtnmsg.posid).find('.ddz_dom_pkblk_tip').html(_rtnmsg.rdhtml);
             }
@@ -76,9 +82,16 @@ var xt_wsk ={
             xt_ddz.uppokernum(_rtnmsg.up.posid,_rtnmsg.up.poknum);
             xt_ddz.watingtime('up',_rtnmsg.up.countdown);
 
+            $('.ddz_dom_up_tm').show();
+            $('.ddz_dom_up_tip').show
+            $('.ddz_dom_pkblk_up_tip').show();
+
             xt_ddz.uptip('next');
             xt_ddz.uppokernum(_rtnmsg.next.posid,_rtnmsg.next.poknum);
             xt_ddz.watingtime('next',_rtnmsg.next.countdown);
+            $('.ddz_dom_next_tm').show();
+            $('.ddz_dom_next_tip').show
+            $('.ddz_dom_pkblk_next_tip').show();
 
             $('.ddz_dom_now_pklist').html(_rtnmsg.my.pokhtml);
             xt_ddz.watingtime('my',_rtnmsg.my.countdown);
@@ -616,10 +629,12 @@ var xt_ddz = {
         }
         if(tp == 'up'){
             $('.ddz_dom_up_tip').html(_tit);
+            $('.ddz_dom_up_tip').show();
             $('.ddz_dom_up_pklist').hide();
             $('.ddz_dom_pkblk_up_tip').show();
         }else if(tp == 'next'){
             $('.ddz_dom_next_tip').html(_tit);
+            $('.ddz_dom_next_tip').show();
             $('.ddz_dom_next_pklist').hide();
             $('.ddz_dom_pkblk_next_tip').show();
         }else{
