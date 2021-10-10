@@ -24,11 +24,11 @@
 5. 倒计时显示(倒计时暂时只是显示,没有处理后台逻辑)
 
 ### 系统开发环境（docker环境）:
- php7.2
- swoole 4.7(swoole环境的PHP单独布署)
- nginx latest
- mysql 5.7
- redis latest
+php7.2  
+swoole 4.7(swoole环境的PHP单独布署)  
+nginx latest  
+mysql 5.7  
+redis latest  
 
 ### 安装步骤
 有时间再补充
