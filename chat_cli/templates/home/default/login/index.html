@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户登录</title>
+<link href="<?=WEB_URL.$this->web_config['template']?>login/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="center">
+        <div class="title">
+            <div class="left">用户登录</div>
+            <div class="right">&nbsp;</div>
+        </div>
+        <div class="content">
+        	<form action="<?php echo $s_url;?>" method="post">
+        	<table >
+            	<tr>
+                	<td class="tit">用户名:</td><td class="con"><input type="text" name="username" class="wb" /></td>
+                </tr>
+                <tr>
+                    <td class="tit">密码:</td><td class="con"><input type="password" name="password" class="wb" /></td>
+                </tr>
+                <tr>
+                   	<td class="sub" colspan="2"><input type="submit" value="登录" /></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

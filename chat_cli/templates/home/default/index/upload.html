@@ -1,0 +1,10 @@
+<div id="up_img">
+    <iframe name="upload_fm" style="display:none;" src=""></iframe>
+    <div class="tit"><span class="left">上传图片</span><span class="right"></span><span class="close"><a onclick="$.fancybox.close()" title="关闭" href="javascript:">X</a></span></div>
+    <div class="con">
+        <form action="<?php echo WEB_URL;?>/member.php?act=upload_file" target="upload_fm" method="post" enctype="multipart/form-data">
+            <p class="fil"><input type="file" name="img" onchange="this.form.submit();$('#sub_but_id').disabled=true" /></p>
+            <p class="but"><input type="hidden" name="case" value="<?php echo $case;?>" /> <input id="sub_but_id" type="submit" value="提交"/><input type="button" onclick="$.fancybox.close()" value="取消"/></p>
+        </form>
+    </div>
+</div>

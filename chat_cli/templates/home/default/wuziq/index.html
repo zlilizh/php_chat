@@ -1,0 +1,280 @@
+
+<?php $this->template('public:wzheader');?>
+<body>
+<div class="top">
+</div>
+<div class="main">
+	<div class="center">
+    	<div class="wzmain wz_dom_list" <?php if($pgdis ==2){echo 'style="display: none;"';}?>>
+        	<div class="wztit">五子棋列表</div>
+            <div class="wzlist">
+            	<ul>
+                    <?php foreach($tablist as $tt=>$ls){ ?>
+                	<li title="点击进入" onclick="xt_wuzi.comein(this)" tbid="<?php echo $tt;?>" class="<?php if($ls['state'] == 1){echo 'liing';}else{ echo 'liddz';}?> wz_dom_li_<?php echo $tt;?>">
+                    	<div class="wzzz">
+                            <div class="wzblk">
+                                <?php if(empty($ls['user1'])){ ?>
+                                    <div class="wzuf wz_dom_li_pos_1">
+                                        <div class="wzemp">
+                                            空
+                                        </div>
+                                    </div>
+                                <?php }else{ ?>
+                                    <div class="wzuf wz_dom_li_pos_1">
+                                        <div class="avt">
+                                            <img src="<?php echo $ls['user1']['pic'];?>"  width="25"/>
+                                        </div>
+                                        <div class="tit">
+                                            <?php echo $ls['user1']['name'];?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                            <div class="wzblk">
+                                <div class="wztb ing wz_dom_li_sta">
+                                    <?php echo $tabsta[$ls['state']];?>
+                                </div>
+                            </div>
+                            <div class="wzblk">
+                                <?php if(empty($ls['user2'])){ ?>
+                                <div class="wzuf wz_dom_li_pos_2">
+                                    <div class="wzemp">
+                                        空
+                                    </div>
+                                </div>
+                                <?php }else{ ?>
+                                <div class="wzuf wz_dom_li_pos_2">
+                                    <div class="avt">
+                                        <img src="<?php echo $ls['user2']['pic'];?>"  width="25"/>
+                                    </div>
+                                    <div class="tit">
+                                        <?php echo $ls['user2']['name'];?>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="wztt">
+                        	<?php echo $tt;?>号桌
+                        </div>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </div>        
+        </div>
+
+        <div class="wzq wz_dom_one" <?php if($pgdis ==1){echo 'style="display: none;"';}?>>
+            <div class="games">
+                <div class="glbk">
+
+                    <?php
+                        if($pgdis == 2 && isset($tabinfo['chesscon']) && !empty($tabinfo['chesscon'])){
+                            foreach($tabinfo['chesscon'] as $kk=>$vv)
+                            {
+                                foreach($vv as $kkk=>$vvv)
+                                {
+                                    if($kkk == 0){
+                                        echo '<dl>';
+                                    }
+                                    if($vvv == 1)
+                                    {
+                                        if(!empty($tabinfo['lastcharr']) && $tabinfo['lastcharr'][0] == $kk && $tabinfo['lastcharr'][1] == $kkk )
+                                        {
+                                            echo '<dd class="hui w2pic dd_'.$kkk.'_'.$kk.'" dx="'.$kkk.'" dy="'.$kk.'"></dd>';
+                                        }else{
+                                            echo '<dd class="hui wpic dd_'.$kkk.'_'.$kk.'" dx="'.$kkk.'" dy="'.$kk.'"></dd>';
+                                        }
+                                    }else if($vvv == 2)
+                                    {
+                                        if(!empty($tabinfo['lastcharr']) && $tabinfo['lastcharr'][0] == $kk && $tabinfo['lastcharr'][1] == $kkk )
+                                        {
+                                            echo '<dd class="hui b2pic dd_'.$kkk.'_'.$kk.'" dx="'.$kkk.'" dy="'.$kk.'"></dd>';
+                                        }else{
+                                            echo '<dd class="hui bpic dd_'.$kkk.'_'.$kk.'" dx="'.$kkk.'" dy="'.$kk.'"></dd>';
+                                        }
+                                    }else{
+                                        if($tabinfo['nowChs'] == 1){
+                                            echo '<dd class="hui wz_dom_chess_dd dd_'.$kkk.'_'.$kk.'" dx="'.$kkk.'" dy="'.$kk.'"><a href="javascript:void(0)" onClick="xt_wuzi.playchess(this)"></a></dd>';
+                                        }else{
+                                            echo '<dd class="hui wz_dom_chess_dd dd_'.$kkk.'_'.$kk.'" dx="'.$kkk.'" dy="'.$kk.'"></dd>';
+                                        }
+                                    }
+
+                                    if($kkk == 14){
+                                        echo '</dl>';
+                                    }
+                                }
+                            }
+                        }else{
+                            for($iy=0;$iy<15;$iy++){
+                                for($ix=0;$ix<15;$ix++){
+                                    if($ix == 0){
+                                        echo '<dl>';
+                                    }
+
+                                    echo '<dd class="hui wz_dom_chess_dd dd_'.$ix.'_'.$iy.'" dx="'.$ix.'" dy="'.$iy.'"></dd>';
+
+                                    if($ix == 14){
+                                        echo '</dl>';
+                                    }
+                                }
+                            }
+                        }?>
+                </div>
+                <div class="act_manual">
+                    <ul>
+                        <li class="wz_dom_start"><span class="nocli">开始</span></li>
+                        <li><span class="nocli">求和</span></li>
+                        <li><span class="nocli">悔棋</span></li>
+                        <li><a href="javascript:void(0)" onclick="xt_wuzi.goout()">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rginfo">
+                <div class="tbinfo wzdo_tb_name">
+                    <?php if($pgdis == 2){ echo $tabinfo['id'].'号桌'; }else{ echo '桌名';}?>
+                </div>
+                <div class="liddz">
+                    <div class="wzldu">
+                        <div class="wzzz">
+                            <div class="wzblk <?php if($pgdis == 2 && isset($tabinfo['nowposid']) && $tabinfo['nowposid'] ==1){echo 'wbk_bj';}?>">
+                                <!--div class="wzuf">
+                                    <div class="avt">
+                                        <img src="/images/member/123.jpg"  width="25"/>
+                                    </div>
+                                    <div class="tit">
+                                        香克斯
+                                    </div>
+                                </div-->
+                                <div class="wzuf wz_dom_position wz_dom_post1">
+                                    <!--div class="wzemp"-->
+
+
+                                    <?php if($pgdis == 2 && isset($tabinfo['user1']) && !empty($tabinfo['user1'])){ ?>
+                                        <div class="avt">
+                                            <img src="<?php echo $tabinfo['user1']['pic'];?>"  width="25"/>
+                                        </div>
+                                        <div class="tit"><?php echo $tabinfo['user1']['name'];?></div>
+                                    <?php }else{ ?>
+                                        <div class="wzemp" onclick="xt_wuzi.sitdown(this)" poid="1">
+                                            坐下
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            <div class="wzblk">
+                                <div class="wztb zbz wz_dom_tab_sta">
+                                    <?php if($pgdis == 2 && isset($tabinfo['state'])){echo $tabsta[$tabinfo['state']];}else{ echo '空位置';}?>
+                                </div>
+                            </div>
+                            <div class="wzblk <?php if($pgdis == 2 && isset($tabinfo['nowposid']) && $tabinfo['nowposid'] ==2){echo 'wbk_bj';}?>">
+                                <div class="wzuf wz_dom_position wz_dom_post2">
+
+                                    <?php if($pgdis == 2 && isset($tabinfo['user2']) && !empty($tabinfo['user2'])){ ?>
+                                    <div class="avt">
+                                        <img src="<?php echo $tabinfo['user2']['pic'];?>"  width="25"/>
+                                    </div>
+                                    <div class="tit"><?php echo $tabinfo['user2']['name'];?></div>
+                                    <?php }else{ ?>
+                                        <div class="wzemp" onclick="xt_wuzi.sitdown(this)" poid="2">
+                                            坐下
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wztt">
+                            <div class="wzlf wz_dom_post_state_1">
+                                <?php
+                                if($pgdis == 2 && $tabinfo['state'] == 2 && $tabinfo['u1sta'] == 1 )
+                                {
+                                    echo '已准备';
+                                }else if($pgdis == 2 && isset($tabinfo['nowposid']) && $tabinfo['nowposid'] ==1){
+
+                                }
+                                ?>
+                            </div>
+                            <div class="wzrg wz_dom_post_state_2">
+                                <?php
+                                if($pgdis == 2 && $tabinfo['state'] == 2 && $tabinfo['u2sta'] == 1 )
+                                {
+                                    echo '已准备';
+                                }else if($pgdis == 2 && isset($tabinfo['nowposid']) && $tabinfo['nowposid'] ==2){
+
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wzchat">
+                    <div id="wzq_dom_chat_id" class="wzctlist wz_dom_chat_list">
+                        <!--div class="wzc_blk">
+                            <div class="wzcb_con">
+                                <div class="wzcbc_name">张生:</div>
+                                <div class="wzcbc_con">这里是我发的一条消息这里是我</div>
+                            </div>
+                        </div>
+                        <div class="wzc_blk">
+                            <div class="wzcb_con">
+                                <div class="wzcbc_name">张生:</div>
+                                <div class="wzcbc_con">这里是我发的一条消息这里是我发的一条消息这里是我发的息</div>
+                            </div>
+                        </div>
+                        <div class="wzc_blk">
+                            <div class="wzcb_con">
+                                <div class="wzcbc_name">张生:</div>
+                                <div class="wzcbc_con">这里是我发的一条消息这是我发的一条消息这是我发的一条消息这是我发的一条消息这是我发的一条消息这是我发的一条消息这里是我发的一条消息这是我发的一条消息</div>
+                            </div>
+                        </div>
+                        <div class="wzc_blk">
+                            <div class="wzcb_con">
+                                <div class="wzcbc_name">张生:</div>
+                                <div class="wzcbc_con">这里是我发的一条消息这里是我发的一条消息这里条消息</div>
+                            </div>
+                        </div-->
+                    </div>
+                    <div class="wzctinp">
+                        <input class="wzipt wz_dom_chat_inp" value="">
+                        <input type="hidden" class="_d_uid" value="<?php echo $res['id'];?>">
+                        <input type="hidden" class="_d_avt" value="<?php echo $res['pic'];?>">
+                        <input type="hidden" class="_d_unm" value="<?php echo $res['uname'];?>">
+                        <input type="hidden" class="_d_tok" value="<?php echo $res['token'];?>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        xt_wsk.link();
+
+        document.onkeydown=function(e){
+            var theEvent    = e || window.event;
+            var code        = theEvent.keyCode || theEvent.which || theEvent.charCode;
+
+            if (code == 13) {
+                event.preventDefault();
+                xt_wuzi.sendtxt();
+                return ;
+            }
+        };
+        <?php if($pgdis == 2 && isset($tabinfo['nowposid']) && $tabinfo['nowposid'] ==1){ ?>
+            xt_wuzi.watingtime(1,<?php echo $tabinfo['wattime'];?>);
+        <?php } ?>
+
+        <?php if($pgdis == 2 && isset($tabinfo['nowposid']) && $tabinfo['nowposid'] ==2){ ?>
+            xt_wuzi.watingtime(2,<?php echo $tabinfo['wattime'];?>);
+        <?php } ?>
+
+    });
+
+
+</script>
+<?php $this->template('public:wzfooter');?>

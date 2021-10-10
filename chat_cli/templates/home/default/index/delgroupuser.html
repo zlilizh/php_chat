@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>删除群组成员</title>
+<link href="<?=WEB_URL.$this->web_config['template']?>public/css/group.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var xt_site	= {
+	'web_url' 		: '<?php echo WEB_URL;?>',
+	'web_default_url'	: '<?php echo $this->web_config["w_d_url"];?>',
+}
+</script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/pub.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template'].'public/js/jquery.js'?>"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/layer.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/moxie.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/laydate/laydate.js"></script>
+</head>
+
+<body>
+<div class="group">
+	<div class="gtit">删除群组成员</div>
+    <div class="gblk">
+    	<div class="gblf">
+        	<div class="gbsrh">
+            	<input class="gbshinput" type="" />
+            </div>
+            <div class="gbulist">
+            	<ul>
+                     <?php  foreach($ulist as $k=>$v){?>
+                    <li>
+                    	<span class="gbuavt" data="<?php echo $v['pic']?>">
+                            <img src="<?php echo $v['pic']?>" height="20px"/>
+                        </span>
+                        <span class="gbuname" data="<?php echo $v['name']?>">
+                        	<?php echo $v['name']?>
+                        </span>
+                        <span class="gbradio" data="<?php echo $v['uid']?>">
+                                <input type="checkbox" class="group_user_check_<?php echo $v['uid'];?>" onclick="xt_group.click_check(this)" value="<?php echo $v['uid'];?>"/>
+                        </span>
+                    </li>
+                     <?php } ?>
+                </ul>
+            </div>
+        </div>
+        <div class="gbrg">
+        	<div class="gbrtit group_check_user_msg" dt="请选择需要删除的联系人">请选择需要删除的联系人</div>
+            <div class="gbrlist">
+                <ul class="add_group_user_list">
+                    <!--li>
+                    	<span class="gbravt">
+                        	<img src="/images/member/20201027130704588.jpg" height="20px"/>
+                        </span>
+                        <span class="gbrname">
+                        	香吉斯
+                        </span>
+                        <span class="gbact"><a href="">X</a></span>
+                    </li-->
+                </ul>
+            </div>
+            <div class="gbrgact">
+            	　<a class="grpcancal" onclick="xt_pub.close_layer()" href="javascript:void(0)">取消</a><a class="grpdel" upgid="<?php echo $upgid;?>" acttp="del" href="javascript:void(0)" onclick="xt_group.sub_user(this)">删除</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

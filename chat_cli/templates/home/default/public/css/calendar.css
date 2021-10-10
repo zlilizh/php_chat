@@ -1,0 +1,126 @@
+.calendar{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.cal_top{
+	width: 100%;
+}
+.cal_top .ct_left{
+	width: 25%;
+}
+.cal_top .ct_center{
+	text-align: center;
+	width: 50%;
+	font-size: 14px;
+	font-weight: 800;
+}
+.cal_top .ct_right{
+	width: 25%;
+	text-align: right;
+}
+.ct_right{}
+.ct_right .cr_link{
+	margin-right: 5px;
+}
+.ct_right .cr_link a{
+	font-size: 10px;
+	line-height: 20px;
+	background-color: #FFF;
+	display: inline-block;
+	margin-right: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border: 1px solid #999;
+	color: #333;
+}
+.ct_right .cr_link a:hover{
+	background-color: #CCC;
+	color: #333;
+}
+.ct_right .cr_now{}
+.ct_right .cr_now a{
+	font-size: 10px;
+	line-height: 20px;
+	display: inline-block;
+	margin-right: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border: 1px solid #999;
+	color: #333;
+
+}
+.ct_right .cr_now a:hover{
+	background-color: #CCC;
+	color: #333;
+}
+.cal_list{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.cal_list .cl_tb{
+	background-color: #CCC;
+	width: 100%;
+}
+.cal_list .cl_tb th{
+	background-color: #FFF;
+	line-height: 25px;
+	color: #666;
+}
+.cal_list .cl_tb td{
+	background-color: #FFF;
+}
+.cal_list .cl_tb .clt_date{
+	margin: 2px;
+}
+.cal_list .cl_tb .clt_date .dt{
+	color: #666;
+	text-align: right;
+}
+.cal_list .cl_tb .clt_date .ctl{
+	line-height: 18px;
+	padding-left: 5px;
+	font-size: 0.95em;
+}
+.cal_list .cl_tb .clt_date .ctl a{
+	font-size: 0.95em;
+	line-height: 18px;
+	color: #FFF;
+	text-decoration: none;
+}
+.cal_list .cl_tb .clt_date .ctl a:hover{
+	color: #FFF;
+	text-decoration: underline;
+}
+.cal_list .cl_tb .clt_date .ctl span{
+	font-size: 1.0em;
+	font-weight: 800;
+	color: #FFF;
+}
+.cal_list .cl_tb .clt_date .ct_stout{
+	color: #FFF;
+	background-color: #3A87AD;
+	margin-bottom: 1px;
+}
+.cal_list .cl_tb .clt_date .ct_st{
+	color: #FFF;
+	background-color: #3A87AD;
+	margin-bottom: 1px;
+}
+.cal_list .cl_tb .clt_date .ct_fi{
+	color: #FFF;
+	background-color: #92c27f;
+	margin-bottom: 1px;
+	
+}
+.cal_list .cl_tb .clt_date .ct_fo{
+	color: #FFF;
+	background-color: #92c27f;
+	margin-bottom: 1px;
+}
+.cal_list .cl_tb .clt_date .ct_in{
+	color: #FFF;
+	background-color: #3A87AD;
+	margin-bottom: 1px;
+}
+

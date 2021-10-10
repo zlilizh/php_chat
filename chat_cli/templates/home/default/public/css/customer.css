@@ -1,0 +1,75 @@
+.detial .list .link_t{
+	margin-bottom: 10px;
+}
+.detial .list .link_t .lkt_list{
+	line-height: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #bdbdbd;
+	height: 25px;
+}
+.detial .list .link_t .lkt_list .lkts{
+	float: left;
+	line-height: 25px;
+	height: 25px;
+}
+.detial .list .link_t .lkt_list .lkts a{
+	color: #666;
+	display: inline-block;
+	padding-right: 18px;
+	padding-left: 18px;
+}
+.detial .list .link_t .lkt_list .lkts a:hover{
+	color: #000;	
+}
+.detial .list .link_t .lkt_list .lkts .on_hov{
+	color: #000;
+	margin-bottom: -1px;
+	padding-right: 17px;
+	padding-left: 17px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #bdbdbd;
+	border-right-color: #bdbdbd;
+	border-left-color: #bdbdbd;
+	border-bottom-style: none;
+	line-height: 25px;
+	height: 25px;
+	display: inline-block;
+	background-color: #FFF;
+}
+.detial .list .customer_info{
+	overflow: hidden;
+}
+.detial .list .cinfo_tab{}
+.detial .list .cinfo_tab tr{}
+.detial .list .cinfo_tab td{
+	background-color: #fff;
+	height: 20px;
+	line-height: 20px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	text-align: left;
+}
+.detial .list .cinfo_tab .tt{
+	background-color: #f2f4f7;
+    color: #666;
+    font-size: 12px;
+    padding-right: 10px;
+    text-align: right;
+    width: 10%;
+}
+.detial .list .cinfo_tab .tc{
+	color: #000;
+	font-size: 12px;
+	padding-left: 10px;
+	width: 40%;
+}
+.detial .list .cinfo_tab .tb{
+	font-size: 12px;
+    padding-left: 10px;
+}

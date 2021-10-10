@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>消息通知</title>
+<link href="<?=WEB_URL.$this->web_config['template']?>public/css/info.css" rel="stylesheet" type="text/css" />
+<link href="<?=WEB_URL.$this->web_config['template']?>public/layui/css/layui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var xt_site	= {
+	'web_url' 		: '<?php echo WEB_URL;?>',
+	'web_default_url'	: '<?php echo $this->web_config["w_d_url"];?>',
+}
+</script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/pub.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template'].'public/js/jquery.js'?>"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/layer.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/layui/layui.js"></script>
+</head>
+
+<body>
+<div class="frirequ">
+    <div class="ufptit">消息通知 <div class="cltb"><a href="javascript:void(0)" onclick="xt_pub.close_layer()" title="关闭">X</a></div></div>
+    <div class="frqlist dom_req_list">
+        <div class="frqblk">
+            <div class="emptrs">
+                暂无任何通知
+            </div>
+        </div>
+    </div>
+    <div class="frqpage" id="dom_req_page">
+
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        xt_mem.getreqlist(1);
+    });
+</script>
+</body>
+</html>

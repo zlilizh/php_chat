@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改密码</title>
+    <link href="<?=WEB_URL.$this->web_config['template']?>public/css/info.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var xt_site	= {
+            'web_url' 		: '<?php echo WEB_URL;?>',
+            'web_default_url'	: '<?php echo $this->web_config["w_d_url"];?>',
+        }
+    </script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/pub.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template'].'public/js/jquery.js'?>"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/layer.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/plupload.full.min.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/moxie.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/laydate/laydate.js"></script>
+</head>
+
+<body>
+<div class="ufinfo">
+    <div class="ufup">
+        <div class="ufptit">修改密码</div>
+        <div class="ufptb">
+            <table >
+
+                <tr>
+                    <td class="tit">原密码</td>
+                    <td class="inp"><input class="upinp upuf_oldpwd" type="password"></td>
+                </tr>
+                <tr>
+                    <td class="tit">新密码</td>
+                    <td class="inp"><input class="upinp upuf_newpwd" type="password"></td>
+                </tr>
+                <tr>
+                    <td class="tit">确认密码</td>
+                    <td class="inp"><input class="upinp upuf_cfpwd" type="password"></td>
+                </tr>
+                <tr>
+                    <td class="tit"></td><td class="act">
+                    <a class="ufcancal"  onclick="xt_pub.close_layer()" href="javascript:void(0)">取消</a>
+                    <a class="ufsub" href="javascript:void(0)" onclick="xt_mem.uppwd(this)">确定</a>
+                </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?php $this->template('public:header');?>
+<link href="<?=WEB_URL.$this->web_config['template']?>public/css/index.css" rel="stylesheet" type="text/css" />
+    <div class="right">
+        <div class="menu">
+            <ul>
+                <li><a  href="<?php echo $wcfg['w_d_url']?>/member">个人信息</a></li>
+            	<li class="sli"></li>
+            	<li><a href="<?php echo $wcfg['w_d_url']?>/member/up_password">修改密码</a></li>
+                <li class="sli"></li>
+                <li><a href="<?php echo $wcfg['w_d_url']?>/member/friend">常用链接</a></li>
+                <li class="sli"></li>
+                <li><a href="<?php echo $wcfg['w_d_url']?>/member/fri_add">填加常用链接</a></li>
+                <li class="sli"></li>
+                <li><a class="on_h" href="<?php echo $wcfg['w_d_url']?>/index/sche_list">日程安排</a></li>
+            </ul>
+        </div>
+        <div class="list">
+                <table class="ls_table" border="0" cellspacing="1" cellpadding="0">
+                    <tr class="lt_tit">
+                        <th width="10%">日程日期</th>
+                        <th width="20%">日程标题</th>
+                        <th width="60%">日程内容</th>
+                        <th colspan="3" width="10%">操作</th>
+                    </tr>
+                    <?php if($res){
+                    	
+                        foreach($res as $k=>$v){
+                    ?>
+                    <tr onmouseover="$(this).addClass('on_hover')" onmouseout="$(this).removeClass('on_hover')">
+                        <td><?=$v->ddate?></td>
+                        <td><?=$v->title?></a></td>
+                        <td style="text-align:left; padding-left:10px;"><?=$v->content?></td>
+                        <td><a  class="sche_detial" href="javascript:void(0)" onclick="xt_pub.check_detial(this)" data="<?php echo $wcfg['w_d_url']?>/index/sche_detial?itemid=<?php echo $v->id;?>">详细</a></td>
+                        <td><a  class="sche_detial" href="javascript:void(0)" onclick="xt_pub.get_sche(this)" type="2" data="<?php echo $v->id;?>">修改</a></td>
+                        <td><a href="javascript:" data="<?php echo $v->id;?>" onclick="xt_pub.del_sche(this)">删除</a></td>
+                    </tr>
+                    
+                    <?php }}else{?>
+                    <tr>
+                        <td colspan="11">暂无数据</td>
+                    </tr>
+                        
+                    <?php }?>
+                </table>
+            <div class="page">
+                <?=$pg?>
+            </div>
+        </div>
+    </div>
+
+
+<div class="fbx_sche"  style="display: none">
+    <div class="fbx_tit"><span class="ft_left">修改日程</span><span class="ft_right"></span><span class="ft_close"><a onclick="layer.closeAll()" title="关闭" href="javascript:">X</a></span></div>
+    
+    <div class="fbx_add_sch">
+    	<table class="fbx_mt">
+            <tbody><tr>
+                <td class="fm_rl sch_data">
+                	<table class="fbx_as_tab" cellpadding="0" cellspacing="1">
+                    	<tr>
+                        	<td class="tt">主题:</td><td  class="tc"><input type="text" name="title" value="" class="tx sch_title"></td>
+                        </tr>
+                        <tr>
+                        	<td class="tt">日期:</td><td class="tc"><input type="text" name="day" value="<?php echo $res->ddate;?>"  readonly="readonly" class="tx sch_day"></td>
+                        </tr>
+                        <tr>
+                        	<td class="tt">内容:</td><td class="tc"><textarea class="as_remark sch_remark" name="remark"></textarea></td>
+                        </tr>
+                    </table>
+                    <div class="fbx_act fbx_as_act">
+                        <button class="fbx_act_btn" data="" onclick="xt_pub.save_sche(this)">确认</button> <a href="javascript:void(0)" onclick="layer.closeAll()">取消</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+</div>
+ 
+ <script>
+ $(document).ready(function() {
+    laydate.render({
+       elem: '.sch_day' //指定元素
+    }); 
+ });
+		
+ </script>   
+ 
+<?php $this->template('public:footer');?>

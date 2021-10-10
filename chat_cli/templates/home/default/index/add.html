@@ -1,0 +1,120 @@
+<?php $this->template('public:header');?>
+<script src="<?=WEB_URL.'/templates/public/kin/kindeditor.js'?>"></script>
+<script src="<?=WEB_URL.'/templates/public/kin/lang/zh_CN.js'?>"></script>
+<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('input[name="content"]', {
+					resizeType : 1,
+					allowPreviewEmoticons : false,
+					minWidth:590,
+					minHeight:260,
+					newlineTag:'br',
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|','image', 'link']
+				});
+			});
+function del_goods_img()
+{
+	var _str	= '<a class="img_upload" href="<?php echo $this->web_config[w_d_url];?>?act=upload&case=1">上传图片</a>'
+	$('#img_url').html(_str);
+	$('#goods_add_id').val('');
+	img_ready();
+}
+</script>
+<div class="block">
+    <div class="t_tit"><span>发布商品</span><a href="<?=WEB_URL?>/member.php?app=goods">商品列表</a><a href="<?=WEB_URL?>/member.php?app=goods&act=add_type">添加店铺类别</a><a href="<?=WEB_URL?>/member.php?app=goods&act=type">店铺类别列表</a></div>
+    <div class="add">
+        <form action="<?=$s_url?>" method="post"  enctype="multipart/form-data" onsubmit="return xt_goods.add_sub(this)">
+                <table class="add_table">
+                    <tr>
+                        <td class="tit">商品名称:</td><td class="con"><input name="name" type="text" class="tx name" /><span class="emsg e_name"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tit">商品类型:</td><td class="con"><input type="radio" checked="checked" class="type" name="type" value='1' />全新 <input name="type"  class="type" type="radio" value='2' />二手 <input  class="type" type="radio" name="type" value='3' />低价处理 <input type="radio"  class="type" name="type" value='4'/>急于脱手 <span class="emsg e_type"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tit">型号:</td><td class="con"><input name="model" type="text" class="tx model" /> <span class="emsg e_model"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tit">所属类:</td><td class="con">
+                            <select name="mycatid">
+                                <option value="0">请选择</option>
+                                <?php 
+                                    if(!empty($t_list)){ 
+                                        foreach($t_list as $k=>$v){
+                                
+                                            echo '<option value="'.$v->id.'">'.$v->name.'</option>';
+                                            if($v->list)
+                                            {
+                                                foreach($v->list as $m=>$n){
+                                                    echo '<option value="'.$n->id.'">|-'.$n->name.'</option>';
+                                                }
+                                            }
+                                
+                                        }
+                                    }
+                                ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tit">价格:</td><td class="con"><input name="price" type="text" class="min_tx"  /> 元/<input name="unit" type="text" class="min_m_tx" value="单位" /></td>
+                    </tr>
+                     <tr>
+                        <td class="tit">最小起订:</td><td class="con"><input name="minmount" type="text" class="min_tx"  /> <input name="munit" type="text" class="min_m_tx" value="单位" /></td>
+                    </tr>
+                    <tr>
+                        <td class="tit">属性:</td><td class="con"><input name="is_hot" type="checkbox" value=1/>热销 <input name="is_reco" type="checkbox" value=1 />推荐</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">图片:</td><td class="con"><input name="img" id="goods_add_id" type="hidden" value="" />
+                        <div class="img_g_block">
+                        	<div class="ib_img">
+                                <table class="img_table" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td id="img_url">
+                                            <a class="img_upload" href="<?php echo $this->web_config['w_d_url'];?>?act=upload&case=1">上传图片</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="action">
+                            	<a class="img_upload" href="<?php echo $this->web_config['w_d_url'];?>?act=upload&case=1">[上传]</a>
+                                <a onclick="del_goods_img()" href="javascript:">[删除]</a>
+                            </div>
+                         </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tit">内容:</td><td class="con"><input type="text" name="content" /> <span class="emsg e_content"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tit"></td><td class="con"><input type="hidden" name='catid'  value="<?=$catid?>"/><input id="sub_but_id" type="submit" value="提交" /></td>
+                    </tr>
+                </table>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+	function img_ready(){
+		$(document).ready(function() {
+			$(".img_upload").fancybox({
+				'modal':false,
+				'padding':0,
+				'overlayShow':true,
+				'overlayColor':'#EEE',
+				'hideOnOverlayClick':false,
+				'hideOnContentClick':false,
+				'enableEscapeButton':false,
+				'showCloseButton':false,
+				'centerOnScroll':true,
+				'autoScale':false
+			});
+		});
+	}
+	img_ready();
+</script>
+<?php $this->template('public:footer');?>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户信息</title>
+<link href="<?=WEB_URL.$this->web_config['template']?>public/css/info.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	var xt_site	= {
+		'web_url' 		: '<?php echo WEB_URL;?>',
+		'web_default_url'	: '<?php echo $this->web_config["w_d_url"];?>',
+	}
+</script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/pub.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template'].'public/js/jquery.js'?>"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/layer.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/moxie.js"></script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/laydate/laydate.js"></script>
+</head>
+
+<body>
+<div class="ufinfo">
+
+	<div class="ufblact">
+		<div class="ufavt"><img onclick="xt_pub.show_phote(this)" big_addr="<?php echo $uinfo['pic'];?>" par="1" src="<?php echo $uinfo['pic'];?>" /></div>
+		<div class="uflist">
+			<ul>
+				<li>
+					<span class="uftit">呢&nbsp;&nbsp;&nbsp;&nbsp;称:</span>
+					<span class="ufval"><?php echo $uinfo['name'];?></span>
+				</li>
+				<li>
+					<span class="uftit">性  别:</span>
+					<span class="ufval">男</span>
+				</li>
+				<li>
+					<span class="uftit">用户名:</span>
+					<span class="ufval"><?php echo $uinfo['uname'];?></span>
+				</li>
+				<li>
+					<span class="uftit">手  机:</span>
+					<span class="ufval"><?php echo $uinfo['phone'];?></span>
+				</li>
+				<li>
+					<span class="uftit">个性签名:</span>
+					<span class="ufqm" title="<?php echo $uinfo['intro'];?>"><?php echo $uinfo['intro'];?></span>
+				</li>
+				<!--li>
+					<span class="uftit">备注:</span>
+					<span class="ufval"></span>
+					<span class="ufact"><a href="javascript:void(0)">U</a></span>
+				</li-->
+			</ul>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

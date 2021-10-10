@@ -1,0 +1,33 @@
+<?php $this->template('public:header');?>
+<link href="<?=WEB_URL.$this->web_config['template']?>public/layui/css/layui.css" rel="stylesheet" type="text/css" />
+<div class="ctlblk" style="padding: 5px;">
+    <div class="ctl_srh">
+        <input type="text" name="title" id="searchctlid"  placeholder="请输入搜索内容" autocomplete="off" class="layui-input">
+    </div>
+    <div class="ctl_lst layui-text dom_ctl_list">
+
+    </div>
+    <div class="page" id="page">
+
+    </div>
+</div>
+<iframe src="" frameborder="0" height="0" width="0" id="iframe" name="iframe"></iframe>
+<script>
+    $(document).ready(function() {
+        xt_pub.getctlist(1);
+        $('#searchctlid').bind('keyup', function(event) {
+            if (event.keyCode == "13") {
+                //回车执行查询
+                // var _seaval = $('#searchctlid').val()
+                // if(_seaval == ''){
+                //     return false;
+                // }else{
+                    xt_pub.getctlist(1,1);
+                // }
+            }
+        });
+    });
+
+</script>
+<script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/layui/layui.js"></script>
+<?php $this->template('public:footer');?>

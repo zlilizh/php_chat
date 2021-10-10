@@ -1,0 +1,315 @@
+.ind{
+	margin-top: 20px;
+	overflow: hidden;
+}
+.ind_tb{
+	width: 100%;
+}
+.ind_tb td{
+	vertical-align: top;
+}
+.ind_tb .i_icon{
+	width: 60px;
+}
+.ind_tb .i_icon dl{
+	list-style-image: none;
+	list-style-type: none;
+	overflow: hidden;
+}
+.ind_tb .i_icon dl dd{
+	text-align: left;
+	width: 100%;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-left: 5px;
+}
+.ind_tb .i_icon dl dd a{
+	background-color: #FFF;
+}
+.ind_tb .i_icon dl dd a:hover{
+
+}
+.ind_tb .i_line{
+	background-color: #C8D3E1;
+	width: 1px;
+}
+
+.ind_tb .i_lf{}
+.if_main{}
+.ifm_tj{
+	overflow: hidden;
+}
+.ifm_tj .ifmt_info{
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.ifm_tj .ifmt_info table{
+	width: 100%;
+}
+.ifm_tj .ifmt_info table tr{}
+.ifm_tj .ifmt_info table tr td{
+	color: #666;
+}
+.ifm_tj .ifmt_info table tr td .hear{
+	background-image: url(../img/hear.gif);
+	background-repeat: no-repeat;
+	width: 15px;
+	display: inline-block;
+	height: 10px;
+}
+.ifm_tj .ifmt_info table tr td .n_red{
+	color: #FF4242;
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.link_line{
+	background-color: #C8D3E1;
+	height: 1px;
+	width: 100%;
+}
+.ifm_info{
+	margin-top: 10px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.ifm_info .ifml_t{
+	font-size: 14px;
+	font-weight: 800;
+	color: #666;
+}
+.ifm_info dl{
+	margin-top: 5px;
+	margin-left: 5px;
+	overflow: hidden;
+}
+.ifm_info dl .ifmlt_t{
+	font-size: 12px;
+	color: #999;
+	margin-right: 20px;
+}
+.ifm_info dl dd{
+	float: left;
+	overflow: hidden;
+	line-height: 25px;
+	height: 25px;
+}
+.ifm_info dl dd a{
+	font-size: 12px;
+	color: #004A6F;
+	line-height: 25px;
+	height: 25px;
+	margin-right: 30px;
+	margin-left: 2px;
+	display: inline-block;
+}
+.ifm_info dl dd a:hover{
+	color: #F00;
+	text-decoration: underline;
+}
+.ifm_info .ifmltl_hig{
+	float: left;
+	width: 48%;
+}
+.ifm_info .ifmltr_hig{
+	float: right;
+	width: 48%;
+}
+
+
+.sys_info{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.sys_info .sys_table{
+	background-color: #FFF;
+	width: 100%;
+}
+.sys_info .sys_table tr{}
+.sys_info .sys_table td{
+	background-color: #FFF;
+	padding: 5px;
+}
+.sys_info .sys_table .stt{
+	text-align: right;
+	width: 100px;
+	padding-right: 3px;
+	font-size: 12px;
+	color: #003E5B;
+}
+.sys_info .sys_table .stc{
+	padding-left: 5px;
+	font-size: 12px;
+	color: #333;
+}
+
+
+.ind_tb .i_rg{
+	width: 300px;
+}
+.ig_main{
+	background-color: #e4edf4;
+	height: 100%;
+	width: 294px;
+	padding: 3px;
+}
+.igm_top{
+	border: 1px solid #6C92AD;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 10px;
+	background-color: #F4FCFF;
+}
+.igm_top h2{
+	font-size: 12px;
+	font-weight: bold;
+}
+.igm_con{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #6C92AD;
+	border-bottom-color: #6C92AD;
+	border-left-color: #6C92AD;
+	background-color: #FFF;
+	margin-bottom: 10px;
+}
+.igm_con .igmc_nt{
+	padding: 10px;
+}
+.igm_con .igmc_nt .in_con{
+	font-size: 10px;
+}
+.igm_con .igmc_nt .in_act{}
+.igm_con .igmc_nt .in_act a{
+	border: 1px solid #9CB8CC;
+	cursor: pointer;
+	height: 20px;
+	line-height: 19px;
+	text-align: center;
+	vertical-align: middle;
+	width: 69px;
+	background-color: #ECF5FF;
+	display: inline-block;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #004160;
+}
+.igm_con .igmc_nt .in_act a:hover{
+	background-color: #D8E2EB;
+	color: #004160;
+	text-decoration: underline;
+}
+.igmc_lt{
+	padding: 10px;
+}
+.igmc_lt dl{}
+.igmc_lt dl dd{
+	line-height: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCC;
+}
+.igmc_lt dl dd a{
+	font-size: 12px;
+	color: #004160;
+}
+.igmc_lt dl dd a:hover{
+	color: #F00;
+	text-decoration: underline;
+}
+.igm_con .ignc_info{
+	padding: 5px;
+}
+.igm_con .ignc_info .cinfo_tb{
+	width: 100%;
+}
+.igm_con .ignc_info .cinfo_tb tr{}
+.igm_con .ignc_info .cinfo_tb td{
+	line-height: 25px;
+	height: 25px;
+}
+.igm_con .ignc_info .cinfo_tb .ct_tt{
+	color: #004A6F;
+	font-size: 12px;
+	width: 90px;
+}
+.igm_con .ignc_info .cinfo_tb .ct_tc{}
+
+.text_area{
+	border: 1px solid #9CB8CC;
+	color: #333;
+	height: 80px;
+	padding: 5px;
+	width: 96%;
+	word-break: break-all;
+	font-size: 14px;
+}
+
+.igm_top h2 span{
+	margin-left: 10px;
+	font-weight: normal;
+}
+.igm_top h2 span a{
+	font-size: 12px;
+	font-weight: normal;
+	color: #004160;
+}
+.igm_top h2 span a:hover{
+	color: #F00;
+	text-decoration: underline;
+}
+
+.fbx_sche{
+	background: url("/templates/home/default/public/img/messagebg.gif") repeat-x scroll 0 0 #ffffff;
+    width: 520px;
+}
+.fbx_sche .fbx_add_sch{
+	 padding: 10px;
+    width: 500px;
+}
+.fbx_as_tab{
+	width: 100%;
+	background-color: #dddddd;
+}
+.fbx_as_tab tr{}
+.fbx_as_tab td{
+	background-color: #fff;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.fbx_as_tab .tt{
+	 background-color: #f2f4f7;
+    color: #999999;
+    font-size: 12px;
+    padding-right: 10px;
+    text-align: right;
+    vertical-align: middle;
+    width: 88px;
+}
+.fbx_as_tab .tc{
+	padding-left: 5px;
+	text-align: left;
+	color: #000;
+}
+.fbx_as_tab .tc .as_remark{
+	border: 1px solid #cccccc;
+    color: #000000;
+    font-size: 12px;
+    height: 60px;
+    padding: 5px;
+    width: 350px;
+}
+.fbx_as_act{
+	margin-top: 10px;
+}
+.igmc_lt dl dd span{
+	margin-left: 10px;
+	color: #03C;
+}
+

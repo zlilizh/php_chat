@@ -1,0 +1,322 @@
+<?php $this->template('public:header');?>
+<div id="chatbody">
+<div class="top">
+</div>
+<div id="bmain">
+    <div id="bodymain">
+          <div id="left">
+              <div class="avatar">
+                  <img src="<?php echo $res['pic'];?>" id="up_mem_avt_id" width="50px"/>
+                  <input type="hidden" class="_d_uid" value="<?php echo $res['id'];?>">
+                  <input type="hidden" class="_d_avt" value="<?php echo $res['pic'];?>">
+                  <input type="hidden" class="_d_unm" value="<?php echo $res['uname'];?>">
+                  <input type="hidden" class="_d_tok" value="<?php echo $res['token'];?>">
+              </div>
+
+              <div class="lefttop">
+                  <ul>
+                      <li><a href="javascript:void(0)"><i title="聊天" class="chatclass chathoverclass lefttb" onclick="xt_pub.getchatlist(this)"></i></a></li>
+                      <li><a href="javascript:void(0)"><i title="联系人" class="friclass lefttb" onclick="xt_pub.getflist(this)"></i></a></li>
+                      <li><a href="javascript:void(0)"><i title="好友请求" class="noticeclass lefttb" onclick="xt_pub.open_frireq(this)"><?php if($sys_uinfo->notice_num>=1){echo $sys_uinfo->notice_num;} ?></i></a></li>
+                  </ul>
+              </div>
+
+              <div class="leftbot">
+                  <ul>
+                      <li><a href="javascript:void(0)" onclick="xt_pub.open_upuinfo()">设置</a></li>
+                      <li><a href="javascript:void(0)" onclick="xt_pub.open_pwd()">密码</a></li>
+                      <li><a href="javascript:void(0)" onclick="xt_pub.logout()">退出</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div id="right">
+              <div id="center">
+                    <div class="search">
+                        <span><input class="sc_txt" name='sc' /></span>
+                        <span class="srhadd"><a href="javascript:void(0)" onclick="xt_pub.open_group(this)" data="/index.php/index/addgroup">+</a></span>
+                    </div>
+                    <div class="ulist">
+                        <div class="chat_ulist_blk">
+                            <?php if(!empty($ulist)){ foreach($ulist as $k=>$v){?>
+                            <?php if($v->rel_type ==1){//群组?>
+                                <div class = "ublk_area">
+                                    <div class="ublk _group_chat_<?php echo $v->group_id;?>" onclick="xt_pub.get_msg(this)" tp="2" gid="<?php echo $v->group_id?>" uname="<?php echo $v->ginfo['gname'];?>">
+                                        <div class="uk_avt">
+                                            <?php foreach($v->ginfo['ulist'] as $kk=>$vv){if($kk <9){?>
+                                            <div class="smuk">
+                                                <img src="<?php echo $vv['pic'];?>"  height="<?php echo $v->ginfo['uavt_hei'];?>" width="<?php echo $v->ginfo['uavt_hei'];?>"/>
+                                            </div>
+                                            <?php }}?>
+                                        </div>
+                                        <div class="ukl">
+                                            <div class="uk_nm">
+                                                <?php echo $v->ginfo['gname'];?>
+                                            </div>
+                                            <div class="sim_msg">
+                                                <?php echo $v->sim_msg;?>
+                                            </div>
+                                        </div>
+                                        <div class="ukr">
+                                            <div class="uk_tm">
+                                                <?php echo $v->tm;?>
+                                            </div>
+                                            <div class="mg_num chat_cmtn_num" <?php if($v->cmtn_cnt==0){ echo 'style="display:none"';} ?> >
+                                                <?php echo $v->cmtn_cnt;?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php }else{//私人 ?>
+                              <div class = "ublk_area">
+                                    <div class="ublk chat_blk_<?php echo $v->fri_uid?>" onclick="xt_pub.get_msg(this)" uid="<?php echo $v->fri_uid?>" uname="<?php echo $v->name?>">
+                                            <div class="uk_avt">
+                                                <img src="<?php echo $v->avt;?>"  width="40"/>
+                                            </div>
+                                            <div class="ukl">
+                                                <div class="uk_nm">
+                                                    <?php echo $v->name;?>
+                                                </div>
+                                                <div class="sim_msg">
+                                                    <?php echo $v->sim_msg;?>
+                                                </div>
+                                            </div>
+                                            <div class="ukr">
+                                                <div class="uk_tm">
+                                                    <?php echo $v->tm;?>
+                                                </div>
+                                                <div class="mg_num chat_cmtn_num" <?php if($v->cmtn_cnt==0){ echo 'style="display:none"';} ?> >
+                                                    <?php echo $v->cmtn_cnt;?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            <?php }}} ?>
+                        </div>
+                        <div class="fri_ulist_blk" style="display: none">
+                            <div class="ultip">
+                                添加好友
+                            </div>
+                            <div class="addfri" onclick="xt_pub.open_addfri()">
+                                <div class="addflogo">
+                                    <img src="/templates/home/default/public/img/addf.png"  width="40"/>
+                                </div>
+                                <div class="addftit">添加好友</div>
+                            </div>
+
+                            <div class="ultip">
+                                群聊
+                            </div>
+                            <div class="friu_group_list">
+                            <?php if(!empty($groupArr)){ foreach($groupArr as $k=>$v){
+                                echo  '<div class = "ublk_area"><div class="ublk _fgl_group_'.$v->ginfo['id'].'" onclick="xt_pub.getgroinfo(this)" gid="'.$v->ginfo['id'].'"><div class="uk_avt">';
+                                foreach($v->ginfo['ulist'] as $kk=>$vv){
+                                if($kk<9)
+                                {
+                                    echo  '<div class="smuk"><img src="'.$vv['pic'].'" height="'.$v->ginfo['uavt_hei'].'" width="'.$v->ginfo['uavt_hei'].'"/></div>';
+                                }
+
+                                }
+                                echo '</div>';
+                                echo '<div class="uk_lnm">'.$v->name.'</div></div></div>';
+
+                                }
+                            }
+                            echo '</div>';
+                            echo '<div class="friu_user_list">';
+                            echo '<div class="ultip">好友</div><div class="ful_ulist_dom">';
+                            if(!empty($friArr)){
+                                foreach($friArr as $k=>$v){
+                                    echo '<div class = "ublk_area"><div class="ublk" onclick="xt_pub.getfriinfo(this)" uid="'.$v->fri_uid.'"><div class="uk_avt">';
+                                    echo '<img src="'.$v->avt.'"  width="40"/>';
+                                    echo '</div><div class="uk_lnm">'.$v->name.'</div></div></div>';
+                                }
+                            }
+                            echo '</div></div>';
+                            ?>
+                        </div>
+                    </div>
+              </div>
+              <div id="main" class="main_dom">
+                  <div class="main_chat_blk" style="overflow: hidden;height: 100%;">
+                    <div class="nav">
+                        <div class="nav_tm chat_f_name">
+                            好友张生
+                        </div>
+                        <div class="nav_act chat_f_act">
+                            <!--a href="javascript:void(0)" onclick="xt_pub.open_group(this)" data="/index.php/index/addgroup">+</a-->
+                            <!--a href="javascript:void(0)" onclick="xt_pub.open_group(this)" data="/index.php/index/addgroup">-</a-->
+                        </div>
+                    </div>
+                    <div class="emoji_area" style="display: none;">
+                    	<div class="emoji_list">
+                            <?php
+                                foreach($wcfg['emoji_arr'] as $kk=>$vv){
+                                    echo '<img title="'.$vv[0].'" onclick="xt_pub.inputemoji(this)" src="/images/emoji/'.$vv[1].'" />';
+                                }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="mchat" id="mchat_id">
+                        
+                    </div>
+                    <div class="upfile_blk"></div>
+                    <div class="minput">
+                        <div class="mi_tool">
+                            <a title="表情" href="javascript:void(0)" class="emoji_click_area" onclick="xt_pub.disableEmojiArea()"><i class = "icon ion-happy-outline"></i></a>
+                            <a title="发送图片" href="javascript:void(0)" id="upload_pic_id"><i class="icon ion-image"></i></a>
+                            <a title="发送附件" href="javascript:void(0)" id="upload_annex_id"><i class="icon ion-folder"></i></a>
+                            <a title="聊天记录" href="javascript:void(0)" onclick="xt_pub.open_ctlist()"><i class="icon ion-chatbubble-working"></i></a>
+                        </div>
+                        <div class="mi_areatext">
+                            <div class="mia_text">
+                             <!--textarea class="put_text chat_input_data"></textarea-->
+                             <div class="div_put_text" contenteditable="true"></div>
+                            </div>
+                            <div class="mia_act">
+                                <a href="javascript:void(0)" onclick="xt_wsk.sendto()">发送</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="main_fri_blk" style="display: none;overflow: hidden;height: 100%;">
+
+                  </div>
+              </div> 
+          </div>
+    
+    </div>
+</div>
+
+<div class="addfrid addfri_blk_dom" style="display:none;">
+    <div class="ufptit">
+        添加好友
+        <div class="cltb"><a onclick="layer.closeAll()" href="javascript:void(0)" title="关闭">X</a></div>
+    </div>
+    <div class="adfdsrh">
+        <div class="adfdinp"><input class="adfsrcinp add_fri_inp" type=""></div>
+        <div class="adfdact"><span class="src"><a href="javascript:void(0)" onclick="xt_mem.searchmem()">搜索</a></span> <span class="cancal"><a href="javascript:void(0)" onclick="xt_mem.resetsrc()">重置</a></span></div>
+    </div>
+    <div class="add_fri_res_dom">
+
+
+    <!--div class="adfdrs">
+        <div class="afrblk">
+            <div class="afrbavt">
+                <img src="/images/member/20201027130704588.jpg"  width="50"/>
+            </div>
+            <div class="afrbrg">
+                <div class="afrbtit">
+                    我的名称的名字的名字
+                </div>
+                <div class="afrbact">
+                    <a href="">+好友</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="adfdrs">
+        <div class="adfdnfind">没找到符合要求的账号或对方设置了查找限制</div>
+    </div-->
+    </div>
+</div>
+<div class="adfrimsg afmsg_blk_dom" style="display:none;">
+    <div class="ufptit">验证信息</div>
+    <div class="afmblk">
+        <div class="afminfo">
+            <div class="afiavt afmsg_bd_pic">
+
+            </div>
+            <div class="afiif">
+                <ul>
+                    <li>
+                        <span class="afiftt">呢称:</span>
+                        <span class="afifva afmsg_bd_unc"></span>
+                    </li>
+                    <li>
+                        <span class="afiftt">用户名:</span>
+                        <span class="afifva afmsg_bd_uname"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="afiat">
+            <div class="afamsg">
+                <textarea class="afamarea afmsg_bd_msg"></textarea>
+                <input type="hidden" class="send_addfri_uname">
+            </div>
+        </div>
+        <div class="afaact">
+            <a class="afaacal"  href="javascript:void(0)" onclick="layer.close(layerind)">取消</a>
+            <a class="afaasub" href="javascript:void(0)" onclick="xt_mem.sendfrireq()">确定</a>
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+
+</div>
+</div>
+<iframe src="" frameborder="0" height="0" width="0" id="iframe" name="iframe"></iframe>
+<script type="text/javascript">
+
+$(document).ready(function() {
+        xt_wsk.link();
+        xt_pub.send_pic();
+        xt_pub.send_annex();
+        xt_pub.up_avt();
+        
+        document.onkeydown=function(e){
+            var theEvent    = e || window.event;    
+            var code        = theEvent.keyCode || theEvent.which || theEvent.charCode;
+
+            if(event.ctrlKey && code == 13)
+            {
+
+                $('.div_put_text').append('<br/>');
+
+                return;
+            }else if (code == 13) {
+                event.preventDefault();
+                xt_wsk.sendto();
+                $('.div_put_text').focus();
+                return ;
+            }
+        };
+
+    $(document).click(function(){
+        $('.emoji_area').hide();
+    });
+
+    $('.emoji_area').click(function(event){
+        event.stopPropagation();
+    });
+    $('.emoji_click_area').click(function(event){
+        event.stopPropagation();
+    });
+
+    document.addEventListener('paste', function (e) {
+        //console.log(e)
+        if (!(e.clipboardData && e.clipboardData.items)) {
+            return false
+        }
+        for (var i = 0, len = e.clipboardData.items.length; i < len; i++) {
+            var item = e.clipboardData.items[i]
+            //console.log(item)
+            if (item.kind === 'file') {
+                var f = item.getAsFile()
+                var reader = new FileReader()
+                reader.onload = function (e) {
+                    var _oldtxt = $('.div_put_text').html();
+                    var _txt = _oldtxt + '<img src="'+ e.target.result +'" class="inputimg">';
+                    $('.div_put_text').html(_txt);
+                }
+                reader.readAsDataURL(f)
+            }
+        }
+    }, false)
+});
+
+
+</script>
+
+<?php $this->template('public:footer');?>

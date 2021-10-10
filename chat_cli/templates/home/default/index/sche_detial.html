@@ -1,0 +1,32 @@
+<?php $this->template('public:nt_header');?>
+<div class="fbx_sche">
+    <div class="fbx_tit"><span class="ft_left">日程详细</span><span class="ft_right"></span><span class="ft_close"><a onclick="xt_pub.close_layer()" title="关闭" href="javascript:void(0)">X</a></span></div>
+
+    <div class="fbx_add_sch">
+    	<table class="fbx_mt">
+            <tbody><tr>
+                <td class="fm_rl sch_data">
+                	<table class="fbx_as_tab" cellpadding="0" cellspacing="1">
+                    	<tr>
+                        	<td class="tt">主题:</td><td  class="tc"><?php echo $res->title;?></td>
+                        </tr>
+                        <tr>
+                        	<td class="tt">日期:</td><td class="tc"><?php echo $res->ddate;?></td>
+                        </tr>
+                        <!--tr>
+                        	<td class="tt">类型:</td><td class="tc"><input type="text" name="stock_num" class="tx sch_title"></td>
+                        </tr-->
+                        <tr>
+                        	<td class="tt">内容:</td><td class="tc"><?php echo $res->content;?></td>
+                        </tr>
+                    </table>
+                    <div class="fbx_act fbx_as_act">
+                        <a href="javascript:void(0)" onclick="xt_pub.close_layer()">取消</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+</div>
+<?php $this->template('public:nt_footer');?>

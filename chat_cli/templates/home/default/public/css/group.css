@@ -1,0 +1,211 @@
+/* CSS Document */
+body{
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+input{outline:none;}
+textarea{outline:none;}
+textarea:focus {outline: none;}
+textarea {resize:none;}
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+ul li{
+	text-decoration: none;
+	list-style-type: none;
+}
+.group{
+	overflow: hidden;
+	border: 1px solid #CCC;
+	width: 600px;
+	box-sizing: border-box;
+	height: 500px;
+}
+.gtit{
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eee;
+    font-size: 14px;
+    background-color: #F8F8F8;
+    color: #333;
+}
+.gblk{
+	overflow: hidden;
+	height: 468px;
+}
+.gblf{
+	float: left;
+	height: 448px;
+	width: 298px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCC;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.gblf .gbsrh{
+	height: 30px;
+	width: 100%;
+	line-height: 30px;
+	margin-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.gbshinput{
+	width: 250px;
+}
+.gblf .gbulist{
+	height: 408px;
+	overflow: hidden;
+}
+.gblf .gbulist ul{}
+.gblf .gbulist ul li{
+	height: 20px;
+	width: 278px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.gblf .gbulist ul li:hover{
+	background-color: #EBEBEB;
+}
+.gblf .gbulist ul li .gbuavt{
+	line-height: 20px;
+	display: block;
+	height: 20px;
+	width: 25px;
+	float: left;
+}
+.gblf .gbulist ul li .gbuname{
+	line-height: 20px;
+	display: block;
+	height: 20px;
+	width: 150px;
+	float: left;
+}
+.gblf .gbulist ul li .gbradio{
+	line-height: 20px;
+	display: block;
+	height: 25px;
+	width: 25px;
+	float: right;
+}
+
+.gbrg{
+	float: left;
+	height: 448px;
+	width: 298px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.gbrtit{
+	height: 30px;
+	width: 100%;
+	line-height: 30px;
+	font-size: 14px;
+	color: #999;
+	margin-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.gbrlist{
+	height: 378px;
+	overflow: hidden;
+}
+.gbrlist ul{}
+.gbrlist ul li{
+	height: 20px;
+	width: 278px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.gbrlist ul li:hover{
+	background-color: #EBEBEB;
+}
+
+.gbrlist ul li .gbravt{
+	line-height: 20px;
+	display: block;
+	height: 20px;
+	width: 25px;
+	float: left;
+}
+.gbrlist ul li .gbrname{
+	line-height: 20px;
+	display: block;
+	height: 20px;
+	width: 150px;
+	float: left;
+}
+.gbrlist ul li .gbact{
+	line-height: 20px;
+	display: block;
+	height: 25px;
+	width: 25px;
+	float: right;
+}
+.gbrlist ul li .gbact a{
+	color:#000000;
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+}
+.gbrlist ul li .gbact a:hover{
+	color:#EB1216;
+	text-decoration: none;
+}
+.gbrgact{
+	height: 30px;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 20px;
+	overflow: hidden;
+}
+.gbrgact a{
+	height: 20px;
+	width: 50px;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	
+	text-decoration: none;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	color: #FFF;
+	float: right;
+	margin-left: 20px;
+}
+.gbrgact a:hover{
+	
+}
+.gbrgact .grpsub{
+	background-color: #5dd5c8;
+}
+.gbrgact .grpsub:hover{
+	background-color: #32C0B3;
+}
+.gbrgact .grpdel{
+	background-color:#F86A6D;
+}
+.gbrgact .grpdel:hover{
+	background-color:#F34446;
+}
+.gbrgact .grpcancal{
+	background-color: #CCC;
+}
+.gbrgact .grpcancal:hover{
+	background-color: #E0E0E0;
+}

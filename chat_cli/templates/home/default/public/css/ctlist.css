@@ -1,0 +1,124 @@
+.ctlblk{
+    width: 600px;
+    height: 710px;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    /*border-color: #EFEFEF;*/
+    margin: 2px;
+}
+.ctl_srh{width: 585px;}
+.ctl_lst{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 600px;
+    width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.ctl_lst:hover{
+    overflow-y: scroll;
+}
+.ctl_lst::-webkit-scrollbar{
+    width:5px;
+    height:5px;
+}
+.ctl_lst::-webkit-scrollbar-track{
+    width:5px;
+}
+.ctl_lst::-webkit-scrollbar-thumb{
+    width:5px;
+    background-color:#B9DCFF;
+}
+.ctll_blk{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 585px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #EFEFEF;
+    display: flex;
+    flex-direction: row;
+}
+.ctll_blk:hover{
+    background-color: #fddcc6;
+}
+.ctllb_pic{
+    height: 36px;
+    width: 36px;
+    margin-left: 10px;
+}
+.ctllb_con{
+    margin-left: 10px;
+}
+
+.ctll_blk .ctb_tit{
+
+}
+.ctll_blk .ctb_tit .ctt_tit{
+    margin-right: 10px;
+}
+.mycttt_cl{
+    color: #2a6dc1;
+}
+.otcttt_cl{
+    color: #979da5;
+}
+.ctll_blk .ctb_tit .ctt_tm{}
+.ctll_blk .ctb_con{
+    color: #0C0C0C;
+}
+
+.ctll_blk .inputimg{
+    width: initial !important;
+    height: initial !important;
+    max-width: 400px !important;
+    max-height:400px !important;
+}
+.ctlblk .page{
+    text-align: center;
+}
+
+.ctlblk .mbc_fl{width:260px;
+    overflow:hidden;}
+.ctlblk  .mbc_fl .mbcf_lf{float:left;width:200px;overflow:hidden;}
+.ctlblk  .mbc_fl .mbcf_lf .lftit{width:200px;overflow:hidden;color:#000000;}
+.ctlblk  .mbc_fl .mbcf_lf  .lfact{
+    overflow: hidden;
+}
+.ctlblk  .mbc_fl .mbcf_lf  .lftip{
+    color: #CCC;
+    font-size: 12px;
+    display:inline-block;
+    padding-right:5px;
+    line-height:18px;
+    float:left;
+}
+.ctlblk  .mbc_fl .mbcf_lf .lfdown{
+    line-height:normal;
+    float:left;}
+.ctlblk  .mbc_fl .mbcf_lf .downtb{
+    background-image:url("/templates/home/default/public/img/down.png");
+    background-size:18px 18px;
+    background-repeat:no-repeat;
+    background-position: center 100%;
+    width: 18px;
+    height:18px;
+    display:inline-block;
+}
+.ctlblk  .mbc_fl .mbcf_lf .downtb:hover{
+    background-image:url("/templates/home/default/public/img/down2.png");
+}
+.ctlblk .mchat_con_bj {
+    background-color: #f2f5fa;
+    line-height: 25px;
+    padding: 6px;
+    margin-right: 8px;
+    color: #FFF;
+    font-size: 14px;
+}
+.ctlblk  .mbc_fl .mbcf_rg{float:right;width:50px;}
+

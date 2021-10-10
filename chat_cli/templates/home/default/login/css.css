@@ -1,0 +1,74 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #EFEFEF;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.center{
+	width: 300px;
+	margin-top: 100px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	background-color: #FFFFFF;
+	background-image: url(img/messagebg.gif);
+	background-repeat: repeat-x;
+}
+.center .title{
+	letter-spacing: 2px;
+	line-height: 29px;
+	height: 26px;
+	overflow: hidden;
+	font-weight: bold;
+	font-size: 14px;
+}
+.center .title .left{
+	color: #FFFFFF;
+	padding-left: 10px;
+	float: left;
+	background-image: url(img/message.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.center .title .right{
+	float: right;
+	width: 4px;
+	font-size: 1px;
+	background-image: url(img/message.gif);
+	background-repeat: no-repeat;
+	background-position: 0 -34px;
+}
+.center .content{
+	padding: 10px 20px 5px 20px;
+	line-height: 200%;
+	word-break: break-all;
+	border: #7998B7 1px solid;
+	border-top: none;
+}
+.center .content table{
+	width: 100%;
+}
+.center .content table tr{}
+.center .content table td{
+	line-height: 30px;
+}
+.center .content table .tit{
+	font-size: 12px;
+	text-align: left;
+	color: #666;
+	width: 60px;
+}
+.center .content table .con{}
+.center .content table .sub{
+	text-align: left;
+	padding-left: 60px;
+}
+.wb{
+	border: 1px solid #C2C2C2;
+	padding: 2px;
+}

@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>聊天</title>
+<link href="/templates/home/default/public/css/chat.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/templates/home/default/public/css/icon.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/templates/home/default/public/layui/css/layui.css">
+<!--link rel="stylesheet" type="text/css" media="screen" href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css"-->
+<script src="/templates/home/default/public/js/jquery.js"></script>
+<script src="/templates/home/default/public/layui/layui.js"></script>
+	
+</head>
+
+<body>
+<div id="chatbody">
+<div class="top">
+</div>
+<div id="bmain">
+    <div id="bodymain">
+      <div id="left">
+          <div class="avatar">
+              <img src="/images/member/20201027130704588.jpg"  width="40"/>
+          </div>
+		  <div class="lefttop">
+			  
+			  <ul>
+				<!--li><img src="../public/img/ct.png"  width="20"/></li>
+				  <li><img src="../public/img/ct2.png"  width="20"/></li-->
+				  <li><i class="chatclass lefttb">N</i></li>
+				  <li><i class="friclass frihoverclass lefttb"></i></li>
+				  <li><i class="noticeclass lefttb">1</i></li>
+				  <!--li><img src="../public/img/ct3.png"  width="20"/></li>
+				  <li><img src="../public/img/ct4.png"  width="20"/></li>
+				  <li><img src="../public/img/hy2.png"  width="20"/></li>
+				  <li><img src="../public/img/hy4.png"  width="20"/></li>
+				  <li><img src="../public/img/hy5.png"  width="20"/></li-->
+				  <!--li><img src="../public/img/hy3.png"  width="20"/></li>
+				  <li><img src="../public/img/tz3.png"  width="20"/></li>
+				  <li><img src="../public/img/tz4.png"  width="20"/></li>
+				  <li><img src="../public/img/tz5.png"  width="20"/></li>
+				  <li><img src="../public/img/tz6.png"  width="20"/></li>
+				  <li><img src="../public/img/tz7.png"  width="20"/></li-->
+			  </ul>
+          </div>
+          
+		  <div class="leftbot">
+			  
+			  <ul>
+				<li><a href="">设置</a></li>
+			  	<li><a href="">密码</a></li>
+				<li><a href="">退出</a></li>
+			  </ul>
+          </div>
+      </div>
+      <div id="right">
+          <div id="center">
+          		<div class="search">
+                	<span><input class="sc_txt" name='sc' /></span>
+					<span class="srhadd"><a href="">+</a></span>
+                </div>
+                <div class="ulist">
+                	<div class="ublk ublk_on">
+                    	<div class="uk_avt">
+                        	<div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="18"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="18"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="12"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="12"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="12"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="12"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="12"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="12"/>
+                            </div>
+                            <div class="smuk">
+                            	<img src="/images/member/20201027130704588.jpg"  width="12"/>
+                            </div>
+                        	
+                        </div>
+                        <div class="ukl">
+                            <div class="uk_nm">
+                                张生
+                            </div>
+                            <div class="sim_msg">
+                            	你什么时候去...
+                            </div>
+                        </div>
+                        <div class="ukr">
+                            <div class="uk_tm">
+                                10月15日
+                            </div>
+                            <div class="mg_num" style="display:none">
+                            	0
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ublk">
+                    	<div class="uk_avt">
+                        	<img src="/images/member/20201027130704588.jpg"  width="40"/>
+                        </div>
+                        <div class="ukl">
+                            <div class="uk_nm">
+                                张生
+                            </div>
+                            <div class="sim_msg">
+                            	[图片]
+                            </div>
+                        </div>
+                        <div class="ukr">
+                            <div class="uk_tm">
+                                10月15日
+                            </div>
+                            <div class="mg_num">
+                            	0
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ublk">
+                    	<div class="uk_avt">
+                        	<img src="/images/member/20201027130704588.jpg"  width="40"/>
+                        </div>
+                        <div class="ukl">
+                            <div class="uk_nm">
+                                张生
+                            </div>
+                            <div class="sim_msg">
+                            	sdfsdf
+                            </div>
+                        </div>
+                        <div class="ukr">
+                            <div class="uk_tm">
+                                10月15日
+                            </div>
+                            <div class="mg_num">
+                            	0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div id="main">
+          		<div class="nav">
+                	<!--div class="nav_tm">
+                    	好友张生
+                    </div-->
+					<div class="nav_tm">
+						<input type="text" class="chatname">
+                    </div>
+                    <div class="nav_act">
+                    	<a href="">+</a>
+						<a href="">+</a>
+                    </div>
+                </div>
+                <!--div class="emoji_area">
+                    	<div class="emoji_list">
+                        	<img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                            <img src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" />
+                        </div>
+                    </div-->
+                <div class="mchat">
+                	<div class="mc_blk">
+                    	<div class="mc_more">
+                        	<a href="">获取更多</a>
+                        </div>
+                    </div>
+                	<div class="mc_blk">
+                    	<div class="mc_tm">
+                        	<span>12:01</span>
+                        </div>
+                        <div class="mcb_con">
+                            <div class="mcbc_avt">
+                                <img src="/images/member/20201027130704588.jpg"  width="35"/>
+                            </div>
+                            <div class="mcbc_con mchat_con_bj">
+                            	这里发送了一条内容这里发送了一条内容这里发送了一条内容这里发送了一条内容这里发送了一条内容这里容这里发送了一条内容
+                            </div>
+                        </div>
+                    </div>
+					<div class="mc_blk">
+                    	<div class="mc_tm">
+                        	<span>2021-05-06 12:01</span>
+                        </div>
+                        <div class="mcb_con">
+                            <div class="mcbc_avt_r">
+                                <img src="/images/member/20201027130704588.jpg"  width="35"/>
+                            </div>
+                            <div class="mcbc_con_r mchat_con_bj">
+                            	<div class="mbc_fl">
+                                	<div class="mbcf_lf">
+                                    	<div class="lftit">
+                                        	这是一个附件.rar
+                                        </div>
+                                        <div class="lfact">
+                                            <span class="lftip">
+                                                13K
+                                            </span>
+                                            <span class="lfdown">
+                                                <a title="下载" href=""><span class="downtb"></span></a>
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="mbcf_rg">
+                                    	<img src="/templates/home/default/public/img/rar.png" width="50px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mc_blk">
+                    	<div class="mc_tm">
+                        	<span>2021-05-06 12:01</span>
+                        </div>
+                        <div class="mcb_con">
+                            <div class="mcbc_avt_r">
+                                <img src="/images/member/20201027130704588.jpg"  width="35"/>
+                            </div>
+                            <div class="mcbc_con_r mchat_con_bj2">
+                            	这里发送了一条内容这里发送了一条内容这里发送了一条内容这里发送了一容这里发送了一条内容
+                            </div>
+							<div class="mcbc_con_r_act"><a href="" class="withdrawpic" title="撤回"></a><a href="" class="withdrawpic" title="撤回"></a></div>
+                        </div>
+                    </div>
+                    <div class="mc_blk">
+                    	<div class="chat_tip">
+                        	这是一个提示消息
+                        </div>
+                    </div>
+                    
+                    <div class="mc_blk">
+                    	<div class="mc_tm">
+                        	<span>12:01</span>
+                        </div>
+                        <div class="mcb_con">
+                            <div class="mcbc_avt_r">
+                                <img src="/images/member/20201027130704588.jpg"  width="35"/>
+                            </div>
+                            <div class="mcbc_con_r mchat_con_bj2">
+                            	<img title="茫然" src="https://emoji.emojipic.cn/pic/72/apple/flushed-face_1f633.png" class="emj">一条消息
+                            </div>
+							<div class="mcbc_con_r_act"><a href="" class="withdrawpic" title="撤回"></a></div>
+                        </div>
+                    </div>
+                    <div class="mc_blk">
+                    	<div class="chat_tip">
+                        	这是一个提示消息
+                        </div>
+                    </div>
+                    
+                    <div class="mc_blk">
+                    	<div class="mc_tm">
+                        	<span>12:01</span>
+                        </div>
+                        <div class="mcb_con">
+                            <div class="mcbc_avt">
+                                <img src="/images/member/20201027130704588.jpg"  width="35"/>
+                            </div>
+                            <div class="mcbc_con mchat_con_bj">
+                            	<div class="mbc_fl">
+                                	<div class="mbcf_lf">
+                                    	<div class="lftit">
+                                        	这是一个附件.rar
+                                        </div>
+                                        <div class="lfact">
+                                            <span class="lftip">
+                                                13K
+                                            </span>
+                                            <span class="lfdown">
+                                                <a title="下载" href=""><span class="downtb"></span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="mbcf_rg">
+                                    	<img src="/templates/home/default/public/img/rar.png" width="50px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+                
+               
+                <!--div class="upfile_blk">
+                	<div class="upfile_ys">100%</div>
+                </div-->
+                
+                <div class="minput">
+                	<div class="mi_tool">
+                    	<a title="表情" href=""><i class = "icon ion-happy-outline"></i></a> <a title="发送图片" href=""><i class="icon ion-image"></i></a> <a title="发送附件" href=""><i class="icon ion-folder"></i></i></a> <a title="聊天记录" href=""><i class="icon ion-chatbubble-working"></i></a>
+                    </div>
+                	<div class="mi_areatext">
+                    	<div class="mia_text">
+                         <!--textarea class="put_text"></textarea-->
+							<div class="div_put_text" contenteditable="true">
+							这是一条消息<img title="茫然" src="http://q.qqbiaoqing.com/q/2013/07/01/11194692d070fae61e9de68ec3fdcfe8.gif" class="emj">一条消息条内容内容这里一条消息
+							</div>
+                        </div>
+                        <div class="mia_act">
+                        	<a href="">发送</a>
+                        </div>
+                    </div>
+                
+                </div>
+          </div> 
+      </div>
+      
+    
+    </div>
+</div>
+<div class="footer">
+
+</div>
+</div>
+	<script>
+	
+
+    document.addEventListener('paste', function (e) {
+          console.log(e)
+          if (!(e.clipboardData && e.clipboardData.items)) {
+            return false
+          }
+          for (var i = 0, len = e.clipboardData.items.length; i < len; i++) {
+            var item = e.clipboardData.items[i]
+            console.log(item)
+            if (item.kind === 'file') {
+              var f = item.getAsFile()
+              var reader = new FileReader()
+              reader.onload = function (e) {
+                //document.getElementById('pic').appendChild(img)
+				  var _oldtxt = $('.div_put_text').html();
+				  var _txt = _oldtxt + '<img src="'+ e.target.result +'" class="inputimg">';
+				  $('.div_put_text').html(_txt);
+              }
+              reader.readAsDataURL(f)
+            }
+          }
+        }, false)
+	
+	</script>
+
+</body>
+</html>

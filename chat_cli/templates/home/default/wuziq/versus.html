@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "ht://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="ht://www.w3.org/1999/xhtml">
+<head>
+<meta ht-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>五子</title>
+<link href="/templates/home/default/public/css/wuzi.css" rel="stylesheet" type="text/css" />
+<script src="/templates/home/default/public/js/jquery.js"></script>
+</head>
+<script>
+
+</script>
+<body>
+<div class="top">
+</div>
+<div class="main">
+	<div class="center">
+	  <div class="wzq">
+		<div class="games">
+			<div class="glbk">
+
+				<?php for($iy=0;$iy<15;$iy++){ for($ix=0;$ix<15;$ix++){
+				if($ix == 0){
+					echo '<dl>';
+				}
+
+
+				if($iy == 3)
+				{
+					echo '<dd class="hui dd_'.$iy.$ix.' wpic row_'.$ix.' col_'.$iy.'" dx="'.$ix.'" dy="'.$iy.'"></dd>';
+				}else if($iy == 5)
+				{
+				echo '<dd class="hui dd_'.$iy.$ix.' w2pic row_'.$ix.' col_'.$iy.'" dx="'.$ix.'" dy="'.$iy.'"></dd>';
+				}elseif($iy == 10)
+				{
+					echo '<dd class="hui dd_'.$iy.$ix.' bpic row_'.$ix.' col_'.$iy.'" dx="'.$ix.'" dy="'.$iy.'"></dd>';
+				}elseif($iy == 13)
+				{
+					echo '<dd class="hui dd_'.$iy.$ix.' b2pic row_'.$ix.' col_'.$iy.'" dx="'.$ix.'" dy="'.$iy.'"></dd>';
+				}else{
+					echo '<dd class="hui dd_'.$iy.$ix.' row_'.$ix.' col_'.$iy.'" dx="'.$ix.'" dy="'.$iy.'"></dd>';
+				}
+
+				if($ix == 14){
+				echo '</dl>';
+				}
+				} }?>
+				<!--dl>
+                  <dd class="hui wpic  dd_00 row_0 col_0" dx="0" dy="0"></dd>
+                  <dd class="hui w2pic  dd_01 row_0 col_1" dcss="hui"  dx="0" dy="1"></dd>
+                  <dd class="hui bpic  dd_02 row_0 col_2" dcss="hui"  dx="0" dy="2"></dd>
+                  <dd class="hui b2pic dd_03 row_0 col_3" dcss="hui"  dx="0" dy="3"></dd>
+                  <dd class="hui  dd_04 row_0 col_4" dcss="hui"  dx="0" dy="4"></dd>
+                  <dd class="hui   dd_05 row_0 col_5" dcss="hui"  dx="0" dy="5"></dd>
+                  <dd class="hui  dd_06 row_0 col_6" dcss="hui"  dx="0" dy="6"></dd>
+                  <dd class="hui  dd_07 row_0 col_7" dcss="hui"  dx="0" dy="7"></dd>
+                  <dd class="hui  dd_08 row_0 col_8" dcss="hui"  dx="0" dy="8"></dd>
+                  <dd class="hui  dd_04 row_0 col_4" dcss="hui"  dx="0" dy="4"></dd>
+                  <dd class="hui   dd_05 row_0 col_5" dcss="hui"  dx="0" dy="5"></dd>
+                  <dd class="hui  dd_06 row_0 col_6" dcss="hui"  dx="0" dy="6"></dd>
+                  <dd class="hui  dd_07 row_0 col_7" dcss="hui"  dx="0" dy="7"></dd>
+                  <dd class="hui  dd_08 row_0 col_8" dcss="hui"  dx="0" dy="8"></dd>
+                  <dd class="hui   dd_08 row_0 col_8" dcss="hui"  dx="0" dy="8"></dd>
+                </dl-->
+
+			</div>
+			<div class="act_manual">
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="shud.del()">开始</a></li>
+                    <li><span class="nocli">求和</span></li>
+                    <li><span class="nocli">悔棋</span></li>
+                  </ul>
+            </div>
+		</div>
+        <div class="rginfo">
+        	<div class="tbinfo">
+            	12号桌
+            </div>
+            <!--div class="tbuf">
+            	<div class="tbublk">
+                	<div class="wzuf">
+                        <div class="avt">
+                            <img src="/images/member/123.jpg"  width="25"/>
+                        </div>
+                        <div class="tit">
+                            香克斯香克斯香
+                        </div>
+                    </div>
+                </div>
+                <div class="tbublk1">
+                	VS
+                </div>
+                <div class="tbublk">
+                	<div class="wzuf">
+                        <div class="wzemp">
+                            坐下
+                        </div>
+                    </div>
+                </div>
+            </div-->
+			<div class="liddz">
+				<div class="wzldu">
+					<div class="wzzz">
+						<div class="wzblk wbk_bj">
+							<div class="wzuf">
+								<div class="avt">
+									<img src="/images/member/123.jpg"  width="25"/>
+								</div>
+								<div class="tit">
+									香克斯
+								</div>
+							</div>
+						</div>
+						<div class="wzblk">
+							<div class="wztb zbz">
+							   对战中
+							</div>
+						</div>
+						<div class="wzblk">
+							<div class="wzuf">
+								<div class="wzemp">
+									坐下
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wztt">
+						<div class="wzlf">60</div>
+						<div class="wzrg">60</div>
+					</div>	
+				</div>
+			</div>
+            
+            <div class="wzchat">
+            	<div class="wzctlist">
+                	<div class="wzc_blk">
+						<div class="wzcb_con">
+							<div class="wzcbc_name">张生:</div>
+							<div class="wzcbc_con">这里是我发的一条消息这里是我</div>
+						</div>
+					</div>
+					<div class="wzc_blk">
+						<div class="wzcb_con">
+							<div class="wzcbc_name">张生:</div>
+							<div class="wzcbc_con">这里是我发的一条消息这里是我发的一条消息这里是我发的息</div>
+						</div>
+					</div>
+					<div class="wzc_blk">
+						<div class="wzcb_con">
+							<div class="wzcbc_name">张生:</div>
+							<div class="wzcbc_con">这里是我发的一条消息这是我发的一条消息这是我发的一条消息这是我发的一条消息这是我发的一条消息这是我发的一条消息这里是我发的一条消息这是我发的一条消息</div>
+						</div>
+					</div>
+					<div class="wzc_blk">
+						<div class="wzcb_con">
+							<div class="wzcbc_name">张生:</div>
+							<div class="wzcbc_con">这里是我发的一条消息这里是我发的一条消息这里条消息</div>
+						</div>
+					</div>
+                </div>
+                <div class="wzctinp">
+                	<input class="wzipt" value="一起下把五子棋">
+                </div>
+            </div>
+			
+        </div>
+		<!--div class="act_num">
+		  <ul>
+			<li><a href="javascript:void(0)" class="shuz_li_1" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_2" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_3" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_4" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_5" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_6" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_7" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_8" onclick="shud.shuz(this)"></a></li>
+			<li><a href="javascript:void(0)" class="shuz_li_9" onclick="shud.shuz(this)"></a></li>
+		  </ul>
+		</div-->
+		<!--div class="intro"> </div>
+		<div class="act_manual">
+		  <ul>
+			<li><a href="javascript:void(0)" onclick="shud.del()">删除</a></li>
+			<li><a href="javascript:void(0)" onclick="shud.creat_data()">设置</a></li>
+			<li><a href="javascript:void(0)" onclick="shud.sw()">遍历</a></li>
+		  </ul>
+		</div-->
+		  
+	  </div>
+		
+	</div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

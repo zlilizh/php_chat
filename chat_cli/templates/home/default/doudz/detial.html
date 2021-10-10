@@ -1,0 +1,177 @@
+<?php $this->template('public:ddzheader');?>
+<div class="ddz layui-text">
+    <div class="ddztop">
+
+    </div>
+    <div class="ddz_main layui-main">
+        <div class="ddzm_top marage10">
+            <dl class="ddt_dltop ddzm_top_dl">
+                <?php if($stepstate > 1){ foreach($timepk as $k=>$v){?>
+                <dd><img src="/images/pk/<?php echo $v;?>.jpg" width="80"></dd>
+                <?php }}else{ ?>
+                <dd><img src="/images/pk/pkbm.png" width="80"></dd>
+                <dd><img src="/images/pk/pkbm.png" width="80"></dd>
+                <dd><img src="/images/pk/pkbm.png" width="80"></dd>
+                <!--dd>pkbm.png</dd>
+                <dd>pkbm.png</dd>
+                <dd>pkbm.png</dd-->
+                <?php } ?>
+            </dl>
+            <div class="ddt_dlbase">
+                <span class="ddtd_tt ">底分 100</span>
+                <span class="ddtd_tt">倍数 <span class="ddtdt_mul ddz_dom_top_mul"><?php echo $multipleNum;?></span></span>
+            </div>
+        </div>
+        <div class="ddzm_center marage10">
+            <div class="dd_left ddz_dom_uinfo_pos_<?php echo $uinfoarr['upuinfo']['tabposnum'];?>">
+                <div class="ddz_uinfo ddz_dom_uinfo">
+                    <div class="ddl_pic">
+                        <?php if(isset($uinfoarr['upuinfo']['uinfo'])){ echo '<img src="'.$uinfoarr['upuinfo']['uinfo']['pic'].'" width="35">';}?>
+                    </div>
+                    <div class="ddl_name">
+                        <?php if(isset($uinfoarr['upuinfo']['uinfo'])){ echo $uinfoarr['upuinfo']['uinfo']['name'];}?>
+                    </div>
+                </div>
+                <div class="ddza_pks ddz_dom_pknum">
+                    <?php echo $uinfoarr['upuinfo']['pknum'];?>
+                </div>
+                <div class="ddz_dz ddz_dom_up_dz"><?php if(isset($uinfoarr['upuinfo']['isdisdz']) && $uinfoarr['upuinfo']['isdisdz'] == 1){ echo '地主';}?></div>
+            </div>
+            <div class="dd_center">
+                <div class="ddc_topact">
+                    <div class="ddc_left ddt_dl_hei ddz_dom_pkblk_pos_<?php echo $uinfoarr['upuinfo']['tabposnum'];?>">
+                        <div class="ddc_tip ddz_dom_pkblk_up_tip">
+                            <div class="ddza_time ddz_dom_up_tm ddz_dom_tm">
+                            <?php if(isset($uinfoarr['upuinfo']['isdistime']) && $uinfoarr['upuinfo']['isdistime'] == 1){?>
+                                    <span class="layui-badge layui-bg-blue">10</span>
+                            <?php } ?>
+                            </div>
+
+                            <div class="ddz_dom_up_tip ddz_dom_pkblk_tip">
+                            <?php if($stepstate == 0){ ?>
+                                <?php if(isset($uinfoarr['upuinfo']['tabinfo']) && $uinfoarr['upuinfo']['tabinfo']->is_readly == 1){?>
+                                    <h1 class="layui-font-orange" style="font-weight:bold;display: inline-block">已就绪</h1>
+                                <?php }else{ ?>
+                                    <h1 class="layui-font-orange" style="font-weight:bold;display: inline-block">未准备</h1>
+                                <?php } ?>
+                            <?php }?>
+                            </div>
+                        </div>
+                        <dl class="ddt_dl ddz_dom_up_pklist" style="display: none">
+                            <dd><img src="/images/pk/c1.jpg" width="80"></dd>
+                        </dl>
+                    </div>
+                    <div class="ddc_right ddt_dl_hei ddz_dom_pkblk_pos_<?php echo $uinfoarr['nextuinfo']['tabposnum'];?>">
+                        <div class="ddc_tip ddz_dom_pkblk_next_tip">
+                            <div class="ddza_time ddz_dom_next_tm ddz_dom_tm">
+                                <?php if(isset($uinfoarr['nextuinfo']['isdistime']) && $uinfoarr['nextuinfo']['isdistime'] == 1){?>
+                                    <span class="layui-badge layui-bg-blue">11</span>
+                                <?php } ?>
+                            </div>
+                            <div class="ddz_dom_next_tip ddz_dom_pkblk_tip">
+                            <?php if($stepstate == 0){ ?>
+                                <?php if(isset($uinfoarr['nextuinfo']['tabinfo']) && $uinfoarr['nextuinfo']['tabinfo']->is_readly == 1){?>
+                                    <h1 class="layui-font-orange" style="font-weight:bold;display: inline-block">已就绪</h1>
+                                <?php }else{ ?>
+                                    <h1 class="layui-font-orange" style="font-weight:bold;display: inline-block">未准备</h1>
+                                <?php } ?>
+                            <?php }?>
+                            </div>
+                        </div>
+                        <dl class="ddt_dr ddz_dom_next_pklist" style="display: none">
+                            <dd><img src="/images/pk/c1.jpg" width="80"></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ddc_fteact marage10">
+                    <div class="ddcf_left"></div>
+                    <div class="ddcf_ctr">
+                        <div class="ddt_dlme">
+                            <dl class="ddz_dom_my_pklist" style="margin-right: auto;margin-left: auto;">
+
+                            </dl>
+                        </div>
+                        <div class="ddf_time marage10 ddz_dom_now_tm">
+                            <?php if($uinfoarr['nowuinfo']['isdistime'] == 1){?>
+                            <span class="layui-badge layui-bg-blue">11</span>
+                            <?php } ?>
+                        </div>
+                        <div class="ddf_act marage10 ddz_dom_act_btn">
+                            <?php if($stepstate == 0){ ?>
+                            <?php if($uinfoarr['nowuinfo']['tabinfo']->is_readly == 0){?>
+                            <button type="button" onclick="xt_ddz.startgame()" class="layui-btn layui-btn-radius layui-btn-sm">准备</button>
+                            <button type="button" onclick="xt_ddz.leavegame()" class="layui-btn layui-btn-radius layui-btn-sm">退出</button>
+                            <?php }else{ ?>
+                            <button type="button" class="layui-btn layui-btn-radius layui-btn-sm layui-btn-disabled">已准备</button>
+                            <?php } ?>
+                            <?} elseif($stepstate == 1 && $uinfoarr['nowuinfo']['isdisbtn'] == 1){ ?>
+                            <button type="button" onclick="xt_ddz.roblandlord(this)" robval="1" class="layui-btn layui-btn-radius layui-btn-sm">抢地主</button>
+                            <button type="button" onclick="xt_ddz.roblandlord(this)" robval="2" class="layui-btn layui-btn-radius layui-btn-sm">不抢</button>
+                            <?} elseif($stepstate == 2 && $uinfoarr['nowuinfo']->is_double == 0){ ?>
+                            <button type="button" onclick="xt_ddz.adddouble(this)" douval="1"  class="layui-btn layui-btn-radius layui-btn-sm">加倍X2</button>
+                            <button type="button" onclick="xt_ddz.adddouble(this)" douval="2"  class="layui-btn  layui-btn-radius layui-btn-sm">不加倍</button>
+                            <?} elseif($stepstate == 3 && $uinfoarr['nowuinfo']['isdisbtn'] == 1){ ?>
+                            <button type="button" onclick="xt_ddz.sendpk('notsend')" class="layui-btn  layui-btn-radius layui-btn-sm">不要</button>
+                            <button type="button" onclick="xt_ddz.gettips()" class="layui-btn  layui-btn-radius layui-btn-warm layui-btn-sm">提示</button>
+                            <button type="button" onclick="xt_ddz.sendpk()" class="layui-btn  layui-btn-radius layui-btn-sm">出牌</button>
+                            <? } ?>
+                        </div>
+                    </div>
+                    <div class="ddcf_left"></div>
+                </div>
+            </div>
+            <div class="dd_right ddz_dom_uinfo_pos_<?php echo $uinfoarr['nextuinfo']['tabposnum'];?>">
+                <div class="ddz_uinfo ddz_dom_uinfo">
+                    <div class="ddl_pic">
+                        <?php if(isset($uinfoarr['nextuinfo']['uinfo'])){ echo '<img src="'.$uinfoarr['nextuinfo']['uinfo']['pic'].'" width="35">';}?>
+                    </div>
+                    <div class="ddl_name">
+                        <?php if(isset($uinfoarr['nextuinfo']['uinfo'])){ echo $uinfoarr['nextuinfo']['uinfo']['name'];}?>
+                    </div>
+                </div>
+                <div class="ddza_pks ddz_dom_pknum">
+                    <?php echo $uinfoarr['nextuinfo']['pknum'];?>
+                </div>
+                <div class="ddz_dz ddz_dom_next_dz"><?php if(isset($uinfoarr['nextuinfo']['isdisdz']) && $uinfoarr['nextuinfo']['isdisdz'] == 1){ echo '地主';}?></div>
+            </div>
+        </div>
+        <div class="ddzm_fter">
+
+            <div class="ddf_pk marage10">
+                <dl class="ddt_dlmeact ddz_dom_now_pklist">
+                    <?php if(!empty($uinfoarr['nowuinfo']['pkarr'])){ foreach($uinfoarr['nowuinfo']['pkarr'] as $k=> $v){
+                        echo '<dd class="footer ddz_dom_pkval_'.$v.'" pkval="'.$v.'" onclick="xt_ddz.clickpk(this)" ><img src="/images/pk/'.$v.'.jpg" width="80"></dd>';
+                    }}
+                    ?>
+                </dl>
+            </div>
+            <div class="ddf_fter" style="display: flex;height: 57px;">
+                <div class="ddf_uinfo">
+                    <div class="ddf_pic">
+                        <img src="<?php echo $uinfoarr['nowuinfo']['uinfo']['pic']?>" width="35">
+                    </div>
+                    <div class="ddf_name">
+                        <?php echo $uinfoarr['nowuinfo']['uinfo']['name']?>
+                    </div>
+                </div>
+                <div class="ddz_dz ddz_dom_now_dz"><?php if($uinfoarr['nowuinfo']['isdisdz'] == 1){ echo '地主';}?></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="" style="display: none">
+        <input type="hidden" class="_d_uid" value="<?php echo $res['id'];?>">
+        <input type="hidden" class="_d_avt" value="<?php echo $res['pic'];?>">
+        <input type="hidden" class="_d_unm" value="<?php echo $res['uname'];?>">
+        <input type="hidden" class="_d_tok" value="<?php echo $res['token'];?>">
+    </div>
+    <div class="ddzfooter">
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        xt_wsk.link();
+    });
+</script>
+<?php $this->template('public:ddzfooter');?>

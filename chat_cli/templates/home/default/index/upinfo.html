@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改账号信息</title>
+    <link href="<?=WEB_URL.$this->web_config['template']?>public/css/info.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var xt_site	= {
+            'web_url' 		: '<?php echo WEB_URL;?>',
+            'web_default_url'	: '<?php echo $this->web_config["w_d_url"];?>',
+        }
+    </script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/pub.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template'].'public/js/jquery.js'?>"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/layer.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/plupload.full.min.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/js/plupload/moxie.js"></script>
+    <script type="text/javascript" src="<?=WEB_URL.$wcfg['template']?>public/laydate/laydate.js"></script>
+</head>
+
+<body>
+<div class="ufinfo">
+    <div class="ufup">
+        <div class="ufptit">修改账号信息</div>
+        <div class="ufptb">
+            <table >
+
+                <tr>
+                    <td class="tit">账号</td>
+                    <td class="inp"><?php echo $uinfo->username;?></td>
+                </tr>
+                <tr>
+                    <td class="tit">呢称</td>
+                    <td class="inp"><input class="upinp upuf_name" type="text" value="<?php echo $uinfo->name;?>"></td>
+                </tr>
+                <!--tr>
+                    <td class="tit">性别</td>
+                    <td class="inp"><input type="radio" name="sex" value="男"> 男 <input name="sex" type="radio" value="女"> 女 </td>
+                </tr-->
+                <tr>
+                    <td class="tit">邮箱</td>
+                    <td class="inp"><input class="upinp upuf_email" type="text" value="<?php echo $uinfo->email;?>"></td>
+                </tr>
+                <tr>
+                    <td class="tit">电话</td>
+                    <td class="inp"><input class="upinp upuf_phone" type="text" value="<?php echo $uinfo->phone;?>"></td>
+                </tr>
+                <tr>
+                    <td class="tit">允许搜索</td>
+                    <td class="inp"><input type="checkbox" <?php if($uinfo->allow_sch == 1){ echo 'checked';} ?> class="upup_allow_sch" ></td>
+                </tr>
+                <tr>
+                    <td class="tit">签名</td>
+                    <td class="inp"><textarea class="uptxt upuf_intro" rows="" cols=""><?php echo $uinfo->intro;?></textarea></td>
+                </tr>
+                <tr>
+                    <td class="tit"></td><td class="act">
+                    <a class="ufcancal"  onclick="xt_pub.close_layer()" href="javascript:void(0)">取消</a>
+                    <a class="ufsub" href="javascript:void(0)" onclick="xt_mem.upuinfo(this)">确定</a>
+                </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>提示信息</title>
+<style type="text/css">
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F0F2F7;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	color: #2B61BA;
+}
+.message{
+	width: 400px;
+	background: #FFFFFF url("/templates/home/default/public/img/messagebg.gif") repeat-x;
+	margin-top: 100px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+.message .title{
+	letter-spacing: 2px;
+	line-height: 29px;
+	height: 26px;
+	overflow: hidden;
+	font-weight: bold;	
+}
+.message .title .left{
+	color: #FFFFFF;
+	background: url("/templates/home/default/public/img/message.gif") no-repeat 0 0;
+	padding-left: 10px;
+	float: left;
+}
+.message .title .right{
+	float: right;
+	background: url("/templates/home/default/public/img/message.gif") no-repeat 0 -34px;
+	width: 4px;
+	font-size: 1px;
+}
+.message .content{
+	padding: 10px 20px 5px 20px;
+	line-height: 200%;
+	word-break: break-all;
+	border: #7998B7 1px solid;
+	border-top: none;
+}
+.message .content p{}
+.message .content .msg{}
+.message .content p a{
+	color: #ABBBD6;
+	text-decoration: none;
+}
+.message .content p a:hover{
+	color: #ABBBD6;
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="message">
+	<div class="title">
+    	<div class="left">提示信息</div>
+        <div class="right">&nbsp;</div>
+    </div>
+    <div class="content">
+    	<p class="msg"><?php echo $str;?></p>
+        <p><a href="<?php echo($jumpUrl); ?>">[ 点这里返回上一页 ]</a></p>
+    </div>
+</div>
+</body>
+</html>

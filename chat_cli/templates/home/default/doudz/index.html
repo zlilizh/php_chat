@@ -1,0 +1,97 @@
+
+<?php $this->template('public:ddzheader');?>
+<div class="ddz layui-text">
+    <div class="ddztop">
+
+    </div>
+    <div class="ddz_main layui-main">
+        <div class="ddztit">斗地主列表</div>
+        <div class="ddzlist">
+            <ul>
+                <?php foreach($tablist as $kk=>$vv){ ?>
+                <li class="<?php echo $vv['licssstr'];?> ddz_dom_li_<?php echo $vv['id'];?>" style="list-style-type: none;">
+                    <div class="ddzpos">
+                        <div class="ddztbblk">
+                            <div class="ddztbuf ddz_dom_pos_1">
+                                <?php if(isset($vv['userlist'][1])){ ?>
+                                    <div class="avt">
+                                        <img src="<?php echo $vv['userlist'][1]['pic'];?>"  width="25"/>
+                                    </div>
+                                    <div class="tit">
+                                        <?php echo $vv['userlist'][1]['name'];?>
+                                    </div>
+                                <?php }else{ ?>
+                                    <div class="dtpos" title="点击进入桌子" tabid="<?php echo $vv['id'];?>" posid="1" onclick="xt_ddz.cometab(this)">
+                                        1号位
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="ddztbblk">
+                            <div class="ddztabsta ing">
+                                <b><?php echo $vv['statetxt'];?></b>
+                            </div>
+                        </div>
+                        <div class="ddztbblk">
+                            <div class="ddztbuf ddz_dom_pos_2">
+                                <?php if(isset($vv['userlist'][2])){ ?>
+                                    <div class="avt">
+                                        <img src="<?php echo $vv['userlist'][2]['pic'];?>"  width="25"/>
+                                    </div>
+                                    <div class="tit">
+                                        <?php echo $vv['userlist'][2]['name'];?>
+                                    </div>
+                                <?php }else{ ?>
+                                <div class="dtpos" title="点击进入桌子" tabid="<?php echo $vv['id'];?>" posid="2" onclick="xt_ddz.cometab(this)">
+                                        2号位
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ddzpos">
+                        <div class="ddztbblk">
+                            <div class="tabnum"><?php echo $vv['id'];?>号桌</div>
+                        </div>
+                        <div class="ddztbblk">
+                            <div class="ddztbuf ddz_dom_pos_3">
+                                <?php if(isset($vv['userlist'][3])){ ?>
+                                    <div class="avt">
+                                        <img src="<?php echo $vv['userlist'][3]['pic'];?>"  width="25"/>
+                                    </div>
+                                    <div class="tit">
+                                        <?php echo $vv['userlist'][3]['name'];?>
+                                    </div>
+                                <?php }else{ ?>
+                                <div class="dtpos" title="点击进入桌子" tabid="<?php echo $vv['id'];?>" posid="3" onclick="xt_ddz.cometab(this)">
+                                        3号位
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <?php } ?>
+
+            </ul>
+        </div>
+    </div>
+    <div class="" style="display: none">
+        <input type="hidden" class="_d_uid" value="<?php echo $res['id'];?>">
+        <input type="hidden" class="_d_avt" value="<?php echo $res['pic'];?>">
+        <input type="hidden" class="_d_unm" value="<?php echo $res['uname'];?>">
+        <input type="hidden" class="_d_tok" value="<?php echo $res['token'];?>">
+    </div>
+    <div class="ddzfooter">
+
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        xt_wsk.link();
+    });
+</script>
+<?php $this->template('public:ddzfooter');?>
+
+
