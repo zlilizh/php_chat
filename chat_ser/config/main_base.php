@@ -14,7 +14,7 @@ include_once(ROOT_PATH.'/includes/common/functions.php');
 include_once(ROOT_PATH.'/includes/common/cachefun.php');
 
 $db_config	= array(
-	'HOST'		=> '172.16.45.53:3356',
+	'HOST'		=> '192.168.3.1:3306',
 	'USER'		=> 'root',
 	'PASSWORD'	=> '123456',
 	'PREFIX'	=> 'xt_',
@@ -22,7 +22,7 @@ $db_config	= array(
 );
 
 $r_cof  = array(
-    'host'      => '172.16.45.53',
+    'host'      => '192.168.3.1',
     'port'      => 6379,
     'password'  => '',
     'database'  => 0,

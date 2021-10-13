@@ -3,7 +3,7 @@ if(!defined('ML')){die('Access Denied');}
 define('WEB_URL','http://www.csct.com');
 
 $db_config	= array(
-	'HOST'		=> '192.168.3.2:3356',
+	'HOST'		=> '192.168.3.1:3306',
 	'USER'		=> 'root',
 	'PASSWORD'	=> '123456',
 	'PREFIX'	=> 'xt_',
@@ -14,11 +14,11 @@ $web_config = array(
     'w_url'     => WEB_URL,
     'w_d_url'   => WEB_URL.'/index.php',
     'emoji_arr' => $emoji_arr,
-    'ws_addr'   => 'ws://192.168.3.2:9501'
+    'ws_addr'   => 'ws://192.168.3.1:9501'
 );
 
 $r_cof  = array(
-    'host'      => '192.168.3.2',
+    'host'      => '192.168.3.1',
     'port'      => 6379,
     'password'  => '',
     'database'  => 0,
