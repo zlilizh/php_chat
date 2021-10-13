@@ -25,8 +25,15 @@ class LoginClass extends ActionClass{
         }
 
         $dMember		= D('member');
-        $res			= $dMember->where('username=\''.$uname.'\' and password=\''.$pword.'\'')->find();
+        $res			= $dMember->where('username=\''.$uname.'\'')->find();
         if($res){
+
+            $pwd = md5($pword);
+            $pwd = md5($pwd.$res->addtime);
+
+            if($pwd != $res->password){
+                $this->error('用户名或密码错误!');
+            }
 
             $dMlog			= D('member_log');
             $arr['member_id']	= $res->id;

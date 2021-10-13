@@ -99,7 +99,7 @@
         $rd = new redis_cache();
         $tm_k   = 'uinfo_'.$uid;
         $uinfo  = $rd->hget('userinfo',$tm_k);
-        //$uinfo  = false;
+//        $uinfo  = false;
         if($uinfo === false)
         {//回调
             $u_arr  = array();

@@ -106,25 +106,14 @@
             $gid    = isset($_POST['gid'])?intval($_POST['gid']):'';
             if($gid == '' || $gid == 0)
             {
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '数据有误!',
-                    '_html'		=> ''
-                );
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误!');
             }
 
             $dFriend    = D('friend');
             $res    = $dFriend ->where('my_uid='.$uid.' and group_id='.$gid)->find();
             if(!$res)
             {
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'	    => '数据有误!',
-                    '_html'	    => ''
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误!');
             }
 
             $ginfo  = get_group_cache($gid);
@@ -162,26 +151,14 @@
             $fid    = isset($_POST['fuid'])?intval($_POST['fuid']):'';
             if($fid == '' || $fid == 0)
             {
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '数据有误!',
-                    '_html'		=> ''
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误!');
             }
 
             $dFriend    = D('friend');
             $res    = $dFriend ->where('my_uid='.$uid.' and fri_uid='.$fid)->find();
             if(!$res)
             {
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'	    => '数据有误!',
-                    '_html'	    => ''
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误!');
             }
 
             $addtime        = Date('Y-m-d H:i',$res->c_time);
@@ -252,13 +229,7 @@ EOF;
             $ismge  = 0;//是否群组管理员
             if(($tp == 1 && ($fid == '' || $fid == 0)) || ($tp == 2 && ($gid == '' || $gid == 0)))
             {
-                $r_array	= array(
-                                '_state'	=> 'error',
-                                '_msg'		=> '数据有误!',
-                                '_html'		=> ''
-                            );
-
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误!');
             }
 
             //更新用户缓存，把用户当前聊天的对应用户ＩＤ写入到用户的缓存中
@@ -276,13 +247,7 @@ EOF;
             
                 if(!$res)
                 {
-                    $r_array	= array(
-                                    '_state'	=> 'error',
-                                    '_msg'	=> '不能给不是好友的人发消息!',
-                                    '_html'	=> ''
-                                );
-
-                    $this->return_json($r_array);
+                    $this->rtnerror('不能给不是好友的人发消息!');
                 }
             }else if($tp ==2)
             {
@@ -298,13 +263,7 @@ EOF;
             
                 if(!$res)
                 {
-                    $r_array	= array(
-                                    '_state'	=> 'error',
-                                    '_msg'	=> '不能给不在的群发消息!',
-                                    '_html'	=> ''
-                                );
-
-                    $this->return_json($r_array);
+                    $this->rtnerror('不能给不在的群发消息!');
                 }
             }
             
@@ -582,35 +541,21 @@ EOF;
         {
             $username   = trim($_POST['uname']);
             if(empty($username)){
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '用户名不能为空'
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('用户名不能为空!');
             }
 
             if($username == $this->uinfo->username){
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '自己不能加自己为好友!'
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('自己不能加自己为好友!');
             }
 
             $res    = D('member')->where('username=\''.$username.'\' and allow_sch=1')->find();
 
             if(!$res){
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '没找到符合要求的账号或对方设置了查找限制'
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('没找到符合要求的账号或对方设置了查找限制!');
             }
 
             $uinfo  = get_uinfo_cache($res->id);
+
             $frires = D('friend')->where('my_uid='.$this->uid.' and fri_uid ='.$res->id.' and state=1')->find();
             if($frires)
             {
@@ -780,36 +725,20 @@ EOF;
             $reqid      = intval($_POST['reqid']);
             $agrval     = intval($_POST['agrval']);
             if($reqid=='' || $reqid == 0){
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '请求ID有误'
-                );
-                $this->return_json($r_array);
+                $this->rtnerror('请求ID有误!');
             }
 
             $res    = D('frireq')->where('id='.$reqid.' and to_uid='.$this->uid)->find();
             if(!$res){
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '数据有误，未找到对应数据'
-                );
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误，未找到对应数据!');
             }
 
             if($res->reqtp == 2){
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '数据有误，未找到对应数据'
-                );
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误，未找到对应数据!');
             }
 
             if($res->state > 0){
-                $r_array	= array(
-                    '_state'	=> 'error',
-                    '_msg'		=> '数据有误,未找到对应合法数据'
-                );
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误,未找到对应合法数据!');
             }
 
             $nowtime    = time();
@@ -1076,12 +1005,7 @@ EOF;
             $alwsch       = $_POST['alwsc'];
 
             if(empty($name)){
-                $r_array	= array(
-                    '_state'	=> 'err',
-                    '_msg'		=> '呢称不能为空!'
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('呢称不能为空!');
             }
 
             $upda['name']       = $name;
@@ -1116,24 +1040,14 @@ EOF;
             $cfpwd          = $_POST['cfpwd'];
 
             if($newpwd != $cfpwd){
-                $r_array	= array(
-                    '_state'	=> 'err',
-                    '_msg'		=> '确认密码与新密码不一致，请确认输入正常!'
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('确认密码与新密码不一致，请确认输入正常!');
             }
 
             $dMember		= D('member');
             $uinfo          = $dMember->where('id='.$this->uid)->find();
 
             if($oldpwd != $uinfo->password){
-                $r_array	= array(
-                    '_state'	=> 'err',
-                    '_msg'		=> '原密码输入错误!'
-                );
-
-                $this->return_json($r_array);
+                $this->rtnerror('原密码输入错误!');
             }
 
             $upda['password']   = $newpwd;
@@ -1201,12 +1115,12 @@ EOF;
             $groupid    = intval($_GET['groupid']);
             //$groupid    = 1;
             if(empty($groupid) || $groupid == 0){
-                exit('异常');
+                $this->rtnerror('异常!');
             }
 
             $groupinfo  = get_group_cache($groupid);
             if($this->uid != $groupinfo['adduid']){
-                exit('异常');
+                $this->rtnerror('异常!');
             }
 
             $ulist  = [];
@@ -1245,11 +1159,7 @@ EOF;
             $dFriend      = D('friend');
             $frilist      = $dFriend->where('my_uid='.$this->uid.' and state=1 and rel_type=0')->order('rel_type desc,id desc')->select();
             if(!$frilist){
-                $rtn_arr	= array(
-                    '_state'	=> 'error',
-                    '_msg'	=> '数据有误'
-                );
-                $this->return_json($rtn_arr);
+                $this->rtnerror('数据有误!');
             }
 
             $fridArr    = [];
@@ -1267,11 +1177,7 @@ EOF;
             }
 
             if($isExp == 1){
-                $rtn_arr	= array(
-                    '_state'	=> 'error',
-                    '_msg'	    => '数据有误'
-                );
-                $this->return_json($rtn_arr);
+                $this->rtnerror('数据有误!');
             }
 
             $delUidArr  = [];
@@ -1280,11 +1186,7 @@ EOF;
 
                 if(empty($uid_arr) || count($uid_arr) ==1)
                 {
-                    $rtn_arr	= array(
-                        '_state'	=> 'error',
-                        '_msg'	=> '数据有误'
-                    );
-                    $this->return_json($rtn_arr);
+                    $this->rtnerror('数据有误!');
                 }
 
                 $dGroup  = D('group');
@@ -1296,12 +1198,7 @@ EOF;
 
                 if(!$group_id)
                 {
-                    $rtn_arr	= array(
-                        '_state'	=> 'error',
-                        '_msg'	=> '添加失败'
-                    );
-
-                    $this->return_json($rtn_arr);
+                    $this->rtnerror('添加失败!');
                 }
 
                 $u_da['my_uid']     = $this->uid;

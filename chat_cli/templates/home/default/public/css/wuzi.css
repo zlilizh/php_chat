@@ -4,6 +4,7 @@ body{
 	padding: 0px;
 	font: "Lucida Grande",tahoma,arial,宋体;
 	background-color: #F2F2F2;
+	//background-image: url("../img/bj123.jpg");background-repeat: no-repeat;
 }
 ul{
 	margin: 0px;
@@ -54,10 +55,10 @@ a:active {
 .main{
 	position:absolute;
 	width:100%;
+	height:100%;
 	overflow:auto;
 	bottom:30px;
 	top:50px;
-	_height:100%;
 	_border-top:50px solid #eee;
 	_border-bottom:50px solid #eee;
 	_top:0px;

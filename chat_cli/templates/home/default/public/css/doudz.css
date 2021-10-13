@@ -1,7 +1,8 @@
 .ddz{
-    //background-image: url("../img/bj.jpg");background-repeat: no-repeat;
+    background-image: url("../img/bj13.jpg");background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    position: absolute;
 }
 
 .ddztop{
@@ -226,6 +227,7 @@
 .ddzlist{
     overflow:hidden;
     color:#666;
+    margin-bottom: 30px;
 }
 .ddzlist ul{
     display: flex;

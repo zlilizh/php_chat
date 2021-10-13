@@ -123,12 +123,7 @@
 
             if($tbbid == 0 || $tbbid >20)
             {
-                $r_array	= [
-                    '_state'	=> 'error',
-                    '_msg'		=> '数据有误'
-                ];
-
-                $this->return_json($r_array);
+                $this->rtnerror('数据有误');
             }
 
             $tabRes     = D('wzulist')->where('userid='.$this->uid)->find();
@@ -204,19 +199,11 @@
 
             $uTabRes     = D('wzulist')->where('userid='.$this->uid)->find();
             if($uTabRes->tableid == 0){
-                $r_array	= [
-                    '_state'	=> 'error1',
-                    '_msg'		=> '数据异常'
-                ];
-                $this->return_json($r_array);
+                $this->rtnerror('数据异常');
             }
 
             if($uTabRes->tableposid > 0){
-                $r_array	= [
-                    '_state'	=> 'error6',
-                    '_msg'		=> '渣,你已经在其它位置坐下,不能脚踩多条船'
-                ];
-                $this->return_json($r_array);
+                $this->rtnerror('渣,你已经在其它位置坐下,不能脚踩多条船');
             }
 
             $tbbid      = $uTabRes->tableid;
@@ -224,20 +211,12 @@
             $tabInfo    = D('wztable')->where('id='.$tbbid)->find();
             if(($positionid == 1 && $tabInfo->user1id >0) || ($positionid == 2 && $tabInfo->user2id >0))
             {
-                $r_array	= [
-                    '_state'	=> 'error3',
-                    '_msg'		=> '数据异常'
-                ];
-                $this->return_json($r_array);
+                $this->rtnerror('数据异常');
             }
 
             if($tabInfo->state ==1)
             {
-                $r_array	= [
-                    '_state'	=> 'error4',
-                    '_msg'		=> '对战中'
-                ];
-                $this->return_json($r_array);
+                $this->rtnerror('对战中');
             }
 
             if($positionid ==1){
