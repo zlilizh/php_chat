@@ -32,4 +32,4 @@ mysql 5.7
 redis latest  
 
 ### 安装步骤
-有时间了再补下系统的界面，安装步骤，初始化数据
+[安装链接](https://blog.csdn.net/zlizh/article/details/120728169)
