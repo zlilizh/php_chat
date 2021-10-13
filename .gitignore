@@ -4,9 +4,6 @@ nbproject/
 /chat_cli/.htaccess
 /chat_cli/.buildpath
 /chat_cli/nginx.htaccess
-/chat_cli/images/annex
-/chat_cli/images/chat
-/chat_cli/images/member
 /chat_ser/config/main.php
 
 
