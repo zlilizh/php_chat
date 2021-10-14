@@ -26,7 +26,7 @@
 ###  源代码地址：
  __https://github.com/zlilizh/php_chat__
 ### 开发环境（基于docker布署）:
-php7.2  （docker pull laradock/php-fpm:latest-7.2 ）  
+php7.2  （docker pull zlilizh/phpfpm7.2 ）  
 swoole 4.7(swoole环境的PHP单独布署)  （docker pull zlilizh/swlphp7.2）  
 nginx latest  （docker pull nginx ）  
 mysql 5.7  （docker pull mysql:5.7.34）  
@@ -43,7 +43,7 @@ redis latest  （docker pull redis）
 ### 下面是以在win10系统的docker中布署此项目的例子
 ##### 1,拉取镜像
 docker pull zlilizh/swlphp7.2  
-docker pull laradock/php-fpm:latest-7.2  
+docker pull zlilizh/phpfpm7.2  
 docker pull nginx  
 docker pull mysql:5.7.34  
 docker pull redis
@@ -94,35 +94,17 @@ docker run -it --name myswoole -p 9501:9501 -v d/dkml/xm:/usr/share/swl zlilizh/
 
 * 启动php7.2:
 ```bash
-docker run -d --name myphp72fpm --restart always --privileged=true -p 9000:9000 -v d/dkml/xm:/usr/share/nginx/html -v d/dkml/phpfpm72_conf:/usr/local/etc/php/conf.d laradock/php-fpm:latest-7.2
+docker run -d --name myphp72fpm --restart always --privileged=true -p 9000:9000 -v d/dkml/xm:/usr/share/nginx/html -v d/dkml/phpfpm72_conf:/usr/local/etc/php/conf.d zlilizh/phpfpm7.2
 ```
 * 启动redis
 ```bash
 docker run -d --name myredis -p 6379:6379 redis:latest
 ```
-* php7.2的容器都需要额外安装下pdo pdo_mysql redis(swoole镜像已经安装了)这三个扩展,进入容器，以及运行以下的命令:
-    * 安装 pdo+mysql
+* php7.2的容器都需要额外配置下pdo_mysql gd redis(swoole镜像已经安装了)这三个扩展,在在D:\dkml\phpfpm72_conf\ 目录下面创建 docker-php-ext.ini文件，添加如下配置:
+    
   ```bash
-   docker-php-ext-install pdo pdo_mysql
-  ```
-
-    * 安装redis扩展
-  ```bash
-  pecl install -o -f redis
-  ```
-    * 安装gd库(自带的gd库不支持jpep图片格式)：
-  ```bash
-	apt update  #更新软件源
-	apt install -y libwebp-dev libjpeg-dev libpng-dev libfreetype6-dev #安装各种库
-	docker-php-source extract #解压源码
-	cd /usr/src/php/ext/gd  #gd源码文件夹
-	docker-php-ext-configure gd --with-webp-dir=/usr/include/webp --with-jpeg-dir=/usr/include --with-png-dir=/usr/include --with-freetype-dir=/usr/include/freetype2   #准备编译
-	docker-php-ext-install gd   #编译安装
-	php -m | grep gd #查看安装情况
-	```
-
-    * 手动在D:\dkml\phpfpm72_conf 目录下建一个docker-php-ext-redis.ini 添加内容如下
-  ```bash
+  extension=pdo_mysql.so
+  extension=gd.so
   extension=redis.so
   date.timezone=Asia/Shanghai
   ```
