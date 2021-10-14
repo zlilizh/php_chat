@@ -25,7 +25,7 @@ CREATE TABLE `xt_ddzglodcoins_log` (
 # Data for table "xt_ddzglodcoins_log"
 #
 
-INSERT INTO `xt_ddzglodcoins_log` VALUES (1,12,12800,0,0,2,1,1634036075),(2,13,12800,0,0,2,1,1634036075),(3,9,0,0,0,1,1,1634036075);
+INSERT INTO `xt_ddzglodcoins_log` VALUES (1,12,12800,0,0,2,1,1634136291),(2,13,12800,0,0,2,1,1634136291),(3,9,0,0,0,1,1,1634136291);
 
 #
 # Structure for table "xt_ddztable"
