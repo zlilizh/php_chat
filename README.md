@@ -182,38 +182,26 @@ www.csct.com
 admin, cs,mingr,kakax,yzbb,yzby,zhuj等，其它账号可以表 __xt_member__ 中查看，密码统一是123456
 
 ###  系统部分界面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/216df5119aa84ad08394e045d30d2260.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+##### 聊天窒
+![在这里插入图片描述](https://img-blog.csdnimg.cn/216df5119aa84ad08394e045d30d2260.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_10,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/55443fa4e1b04fc0a8af3321d6b0c3d0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bddd5370b5be498eab18b4b4da6f0dce.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3f5a49abf5445689a65d475d61fad51.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d4a614d128664b6d909113334087f5b7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f5662fec6ebf4162bd565cdb9c8748b2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e00c4a1fdc77479584b55953d849bc28.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/e25d7a84d09e4af79dddec825bb71c04.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/97ef181782cd4593ab8916125bde66d6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/5cb141380509461296c22f6c022fab6d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/a63af82785f641ce971822f07bc8057b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1c045210a3254cfe91a0e0adcb8b2ed8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+##### 五子棋
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/37f432b3f9354a7cae2a1f8ec51517ca.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/854f810940594e6e979665ffe8132ea7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7f6a83d4f94f439f8edf331fdb5ade35.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f756336c43ba498a844544f7c5f4d261.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/3182326607a544ecbf4444f4bda655a8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/21e9e1971175414d8de3f6112fc302cc.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/5646b2062fc549c480a501ab512fd6d7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/c177c2b614fa4c789274eae0f304a0fc.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+##### 斗地主
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/0066ab2de0374f1d97e1d5a53b7da1ce.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2d420863f58244d9b2b171eea16102f6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0b84c0475cf04178a3bfb4c2c94d1afe.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/9856b3da6b0347ebbb4869b48ca93a97.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ae39fffe496a45e2ac6650bb35e1e571.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/642d448e7ba645a1aeea66ca3253c06b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/786ceedf9695423192191cd760188dab.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d69b68c6aeb04dd2afb612a547f13a47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c56689e78bf44121b7d354de4a98a869.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b997f59bebb04159aadb7ea92bb959bf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8209fab3910d4d849f49dadb2aaba97f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/dd518e425dc24274adda2c39da079c5a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/16b65141bcdc49548775f72c6cb71ff7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/39dd88179716404b973310bb2f93a35f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAemxpemg=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
